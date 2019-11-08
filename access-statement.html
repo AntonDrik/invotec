@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <title>Access Statement</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <!--        <object type="text/html" data="header.html"></object>-->
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <svg width="65" height="44" viewBox="0 0 65 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g style="mix-blend-mode:screen">
+                            <rect width="65" height="44" fill="url(#pattern0)"/>
+                        </g>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="translate(0 -0.25) scale(0.005 0.00738636)"/>
+                            </pattern>
+                            <image id="image0" width="200" height="200"
+                                   xlink:href="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0MCA3OS4xNjA0NTEsIDIwMTcvMDUvMDYtMDE6MDg6MjEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MUU3RkM3OURCN0IxMUU5QTc2RkE3REE0MzZFNjg4RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MUU3RkM3QURCN0IxMUU5QTc2RkE3REE0MzZFNjg4RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcxRTdGQzc3REI3QjExRTlBNzZGQTdEQTQzNkU2ODhGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjcxRTdGQzc4REI3QjExRTlBNzZGQTdEQTQzNkU2ODhGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEB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kkbxzRxSpoP4W+YnhDU1kKHzNntHxlpm2PFjZUtfK2WLlOtk22p+EqsS5rIBylmbhR3YD6WU/wAT8y6Ze5WbHPfCDnmIu5J+B3VrlcSW+iOV1trpQSdFbfpbPtGgMgljLn19lB6VsV1h+0g6p5JYR2/ZVpe4HOhP4ySKKS9smYaDWMwB7tN/5wje2ZU/N9+Ujce2X3yrdLaiql2FdyJoNXLjNKdbpKDjvcx7KW4kj8MMPaekzlK26vx4I3pbSPJ+qhwDG+Hve19epa3WMtrKFzoZZr21aNR9pFvLPKR/BjY/gqT8r59eMGPsJb2yzd3fzRISIYMdkFlcgahVa5treAMfgPcmRftYD1qm/uX8l297I18/jzDVb/HHEklRIsK9UtErWbNDUlTjRamwin+Rg1BpQ2r9LiG42bhK+vJko9jaLydF+K/Heq7lOTZ6ZcpzRR9Em3bb2uq6N93RvqeT1YG4k2tt0EcURLFs2fJnzk5V3RZT8L4fbvheu5fSVCwa8vQGJ0uZEPtxQkBD91hMgZg3vXEyMIlrAFsaoTQKUClApQKUClApQKUClApQKUClApQKUClApXyRmRkZGZGR+SMvQyMvsMj/ABD4+h+FfoJB1HoRU1es/ffnzq/HZz+Ttq/UcfJkvSHOPdiw/YUURcuYmXOkZ2VGkRLbNS5C1PK9sZ/8ip99bzsV1wzM4J7V8duuO25Dkc1BJack2gC9tSsczBV2qswZWjnUAKAZEMqqgSOVF9KtH0Z5d9t9DwJhsDPDkOGK7McdeBngTe4eRrZ1ZZrV2+s6I5tzJI0sltJISx+vul3Bc7g6vGap7j5HHzuTy0jOOQ2tSrUN2S5Fq5aKnIeVnc+uClKnDQTJk/8Aj7/uH9dE9Kp0lg77CJkjkkvLwThzb/dygEax7CBNNv8Azdd2q/HTb86/nyf8lG8ks5is0+GGGbG2UkBQXf3sS+5KJN4P3a22aabduj6/Hd8qhaJ0qrtApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKV/9k="/>
+                        </defs>
+                    </svg>
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- About Us -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="about" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">About Us</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="about">
+                                <a class="dropdown-item" href="what-we-are.html">Who We Are</a>
+                                <a class="dropdown-item" href="what-we-do.html">What We Do</a>
+                                <a class="dropdown-item" href="seed-angel.html">Seed/Angel Investing</a>
+                                <a class="dropdown-item" href="partner.html">Partners</a>
+                            </div>
+                        </li>
+
+                        <!-- Team -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="team" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Team</a>
+                            <div class="dropdown-menu" aria-labelledby="team">
+                                <a class="dropdown-item" href="management-team.html">Management Team</a>
+                                <a class="dropdown-item" href="advisors.html">Advisors</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="investors.html">Investors</a>
+                        </li>
+
+                        <!-- Funds -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="funds" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Funds</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="funds">
+                                <a class="dropdown-item" href="seis_fund.html">SEIS/EIS Fund</a>
+                                <a class="dropdown-item" href="gt_fund.html">Global Technology Fund</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="/news.html">News</a>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><!-- .header-->
+
+    <main class="content">
+        <div class="container">
+            <div class="text-page">
+                <div class="text-page__header">
+                    <h2 class="title__big">Access Statement</h2>
+                    <p class="access-welcome">
+                        Welcome to the accessibility statement for Innvotec Limited. This page covers the accessibility
+                        and standards compliance measures taken by Innvotec Limited,
+                        as well as guidelines on how to take advantage of those features. We have made every reasonable
+                        attempt to make the content on this website as accessible
+                        as possible to all disabled persons.
+                    </p>
+                </div>
+                <div class="text-page__content">
+
+                    <h4>Why does our site need to be accessible?</h4>
+                    <p>
+                        An accessible website has a huge number of advantages - Blind users may utilise a screen reader
+                        which uses speech synthesis to read out a web site's
+                        content, valid and semantic XHTML design means that this will work the way that the software
+                        intends. Partially sighted visitors will need to increase
+                        the size of the text on your website and valid CSS design will be needed to allow this to
+                        happen. Deaf visitors and those with no mouse access along with
+                        web users with Colour Blindness and even Epilepsy are also considered.
+                    </p>
+
+                    <h4>Website Navigation</h4>
+                    <p>
+                        People with mobility issues may be unable to control a mouse to click on links. The W3C
+                        introduced the accesskey attribute to enable users to select
+                        the appropriate key on their keyboards and navigate to a particular link. Able-bodied users can
+                        find them equally useful as shortcuts, too.
+                    </p>
+                    <p>Access keys used on this site:</p>
+                    <ul>
+                        <li>Home</li>
+                        <li>Corporate</li>
+                        <li>Industry Focus</li>
+                        <li>Products & Solutions</li>
+                        <li>Case Studies</li>
+                        <li>International</li>
+                        <li>News & Events</li>
+                        <li>Client Area</li>
+                        <li>Contact Us</li>
+                    </ul>
+
+                    <p>
+                        The accesskey attribute is currently supported by the following web browsers: Internet Explorer
+                        4+ (Windows) & 5+ (Mac),
+                        Mozilla (Windows + Linux), Netscape 6+ (Windows) and Opera 7 (Windows + Linux).
+                    </p>
+                    <p>Windows users can navigate with the accesskey feature by typing 'ALT'+'Accesskey' and Mac users
+                        can use 'CTRL'+'Accesskey'.</p>
+
+                    <h4>Web Standards & Guidelines</h4>
+                    <p>
+                        This site has been built using code compliant with W3C standards for XHTML and CSS. The site
+                        displays correctly in current browsers and using standards compliant XHTML/CSS code means any
+                        future browsers will also display it correctly.
+                    </p>
+                    <p>
+                        The site uses semantically correct mark-up (the correct tag for the correct purpose), text size
+                        can be increased via your browser and wherever Flash
+                        and Javascript are used, measures have been put in place to ensure that viewers without Flash 7
+                        or with Javascript disabled will still be able to use
+                        the site to its full potential.
+                    </p>
+
+                    <p>
+                        Links within this website use descriptive title attributes. These supply additional information
+                        about the nature of the link.
+                        Links are also provided in such a way that they make sense out of context. All content images
+                        used in this site include descriptive 'ALT' attributes.
+                    </p>
+
+                    <p>
+                        Finally, this website uses relative font sizes, which means they can be easily resized by
+                        browsers if you find the type difficult to read.
+                        The font size can be amended by using the appropriate menu options as follows:
+                    </p>
+
+                    <p>
+                        <b>Firefox</b>: <span>View > Text size</span><br>
+                        <b>Internet Explorer</b>: <span>View > Text size</span><br>
+                        <b>Opera</b>: <span>File > Preferences > Fonts > Minimum font size (pixels)</span><br>
+                        <b>Safari</b>: <span>View > Make Text Bigger (or Make Text Smaller)</span>
+                    </p>
+
+                    <p>Alternatively, scroll with the wheel of your mouse whilst holding down the control key.</p>
+
+                    <h4>Exceptions</h4>
+                    <p>
+                        Whilst Innvotec Limited strive to adhere to the accepted guidelines and standards for
+                        accessibility and usability, it is not always possible
+                        to do so in all areas of the website. If you find a specific problem, please contact us.
+                    </p>
+
+
+                    <h2>Cookie Policy</h2>
+
+
+                    <h4>How We Use Cookies</h4>
+                    <p>
+                        A cookie is a small file which asks permission to be placed on your computer's hard drive. Once
+                        you agree, the file is added and the cookie helps
+                        analyse web traffic or lets you know when you visit a particular site. Cookies allow web
+                        applications to respond to you as an individual. The web
+                        application can tailor its operations to your needs, likes and dislikes by gathering and
+                        remembering information about your preferences.
+                    </p>
+                    <p>
+                        We may use traffic log cookies to identify which pages are being used. This helps us analyse
+                        data about webpage traffic and improve our website in
+                        order to tailor it to customer needs. We only use this information for statistical analysis
+                        purposes and then the data is removed from the system.
+                    </p>
+                    <p>
+                        Overall, cookies help us provide you with a better website, by enabling us to monitor which
+                        pages you find useful and which you do not. A cookie in no
+                        way gives us access to your computer or any information about you, other than the data you
+                        choose to share with us.
+                    </p>
+                    <p>
+                        You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but
+                        you can usually modify your browser setting to decline
+                        cookies if you prefer. This may prevent you from taking full advantage of the website.
+                    </p>
+
+                    <h4>Links to other websites</h4>
+                    <p>
+                        Our website may contain links to other websites of interest. However, once you have used these
+                        links to leave our site, you should note that we do not
+                        have any control over that other website. Therefore, we cannot be responsible for the protection
+                        and privacy of any information which you provide whilst
+                        visiting such sites, and such sites are not governed by this privacy statement. You should
+                        exercise caution and look at the privacy statement applicable
+                        to the website in question.
+                    </p>
+
+                    <h4>Your rights under the legislation:</h4>
+                    <ul>
+                        <li><h6>Access to information</h6>
+                            The Data Protection Legislation gives you the right to access information held about you
+                            called a Subject Access Request.
+                            Please contact us at the address below if you need such information.
+                            <h6>Innvotec, Painters Hall, 9 Little Trinity Lane, London EC4V 2AD</h6>
+                            We will provide your information to you free of charge and within 30 days of receiving your
+                            request.
+                            You may also contact the credit reference agencies operating within the UK to obtain further
+                            information about what information
+                            they hold about you. Please contact us, and we will provide you with their details. Further
+                            information on how the three CRAs use and
+                            store personal data they receive about you can be found at <a href="https://www.callcredit.co.uk/crain">https://www.callcredit.co.uk/crain</a>
+                        </li>
+                        <li><h6>Right to rectification</h6>
+                            You are entitled to have personal data rectified if it is inaccurate or incomplete.
+                        </li>
+                        <li><h6>Right to erasure</h6>
+                            In certain circumstances, you may have the right to have your personal data erased, for
+                            example, if you believe it is no longer necessary for
+                            the purpose for which it was originally collected. If we are unable to accede to your
+                            request for a valid legal reason, we will tell you why.
+                        </li>
+                        <li><h6>Right to restrict processing</h6>
+                            You may have the right to ask us to restrict the processing of your data for a certain
+                            period of time. For example, if you contest the accuracy
+                            of your personal data you can ask us to restrict processing until the accuracy of the data
+                            has been verified.
+                        </li>
+                        <li><h6>Right to object</h6>
+                            You have the right to object at any time to your personal data being processed for marketing purposes.
+                        </li>
+                        <li><h6>Right to lodge a complaint</h6>
+                            If you believe we have breached the regulations, you have the right to lodge a complaint with the Information Commissioner’s
+                            Office via their website at: <a href="https://www.ico.org.uk" target="_blank">www.ico.org.uk</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- .content -->
+
+</div>
+<!-- .wrapper -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <svg width="68" height="17" viewBox="0 0 68 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57.2063 7.56861L51.3033 7.50199C52.0095 4.71706 55.8338 4.02416 57.2063 7.56861ZM49.2513 15.9234L49.8642 16.03V13.858C48.2519 13.8847 46.3597 11.9392 46.373 10.4868L46.413 5.13013L49.7843 5.17011C49.1047 6.43598 48.5717 7.32876 48.8382 9.67396C49.3445 11.8859 51.2767 13.8447 53.7951 13.8713V12.1791C53.0755 11.9525 52.4359 11.7393 52.1028 11.2996C51.6231 10.74 51.3566 10.2736 51.2367 9.32751L57.4595 9.44744C57.5261 10.1803 57.8459 10.8332 58.1923 11.3929C58.8453 12.1391 59.2184 12.6854 60.0712 13.1918C60.5775 13.4849 61.0172 13.6448 61.5902 13.7781C63.3891 14.2045 67.0002 12.9919 67.6664 11.4195L66.2007 10.6067C66.1607 10.5801 65.8276 10.4202 65.6677 10.3535C63.629 12.6588 59.6847 11.8593 59.738 8.47471C59.7913 5.22341 64.1486 4.06413 65.6544 6.75578L67.4399 5.66313C66.5738 4.69041 65.9608 3.74433 64.655 3.38456C63.3624 3.0381 61.6302 3.06475 60.4576 3.70436C58.9652 4.53051 59.285 4.65043 58.4722 5.17011C57.8192 4.41058 56.7666 3.53113 55.7405 3.37123C54.2215 2.94483 48.585 3.17135 46.5196 3.1447V0H44.3077C44.3077 3.26463 44.1078 7.15554 44.321 10.3402C44.8407 14.2045 47.1992 14.7375 49.2246 15.8834L49.2513 15.9234Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.9597 9.42091C40.7065 10.3403 40.4134 10.82 39.6405 11.353C38.7478 11.9793 36.9889 12.006 36.1361 11.4863C34.7636 10.6468 34.084 9.19438 34.5504 7.63536C35.7629 3.5579 42.1323 5.18355 40.9597 9.40758V9.42091ZM32.0586 8.50148C32.0586 9.54083 32.4184 10.7001 32.9247 11.473C32.938 11.4996 32.9647 11.5396 32.9913 11.5662L33.1912 11.8194C33.2045 11.8461 33.2445 11.8727 33.2578 11.8994L33.6709 12.3791C35.5631 14.2446 38.8277 14.4311 40.973 13.1386C41.6659 12.7255 42.572 11.7128 42.9318 10.9933C45.2637 6.2229 40.0536 1.70572 35.5897 3.6112C34.1639 4.22415 32.9514 5.29015 32.4184 6.76923C32.2585 7.19563 32.0719 7.87521 32.0852 8.51481L32.0586 8.50148Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.08754 7.87516L3.10087 13.8314L5.33947 13.8581L5.36612 8.95449C5.36612 7.07566 5.63262 6.12959 6.9518 5.58326C8.29763 5.02361 9.65678 5.62324 10.2431 6.94241C10.3897 7.27554 10.4829 7.99509 10.4963 8.86122L10.5895 13.8448L12.6949 13.8314L12.7215 7.87516C12.7215 6.19621 11.962 4.74379 10.7361 3.94428L10.363 3.71776C9.1371 3.01153 7.31158 2.87828 6.05902 3.46458C4.15355 4.34403 3.07422 5.68986 3.07422 7.87516H3.08754Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1562 13.8979H27.0744C27.0744 13.8179 26.8346 13.9645 27.301 13.2183L33.4838 3.1979H30.912L26.4082 10.2602L26.3815 3.21122L24.2096 3.18457L24.1562 13.9112V13.8979Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.14299V13.8315H2.25193L2.30523 5.43677L0 6.14299Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.43676L2.22528 4.73053L2.30523 3.13153L0 3.09155V5.43676Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6461 7.87516L13.6595 13.8314L15.8981 13.8581L15.9247 8.95449C15.9247 7.07566 16.1912 6.12959 17.5104 5.58326C18.8562 5.02361 20.2154 5.62324 20.8017 6.94241C20.9482 7.27554 21.0415 7.99509 21.0548 8.86122L21.1481 13.8448L23.2535 13.8314L23.2801 7.87516C23.2801 6.19621 22.5206 4.74379 21.2947 3.94428L20.9216 3.71776C19.6957 3.01153 17.8702 2.87828 16.6176 3.46458C14.7121 4.34403 13.6328 5.68986 13.6328 7.87516H13.6461Z" fill="black"/>
+                </svg>
+
+            </div>
+        </div>
+        <div class="row footer-info-block">
+            <div class="col-md-12">
+                <p class="footer-info">Innvotec Limited is authorised and regulated by the Financial Conduct Authority (FCA) –
+                    FRN
+                    122365</p>
+                <p class="footer-info">Innvotec Limited is a registered company in England & Wales. Registration Number:
+                    02030086.<br>
+                    Registered Office: Painters Hall, 9 Little Trinity Lane, London, EC4V 2AD.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <span class="copyright">&copy; Copyright 2019, Innvotec Limited. All rights reserved.</span>
+                    </li>
+                    <li class="list-inline-item"><a href="terms.html" class="rule">Terms of use</a></li>
+                    <li class="list-inline-item"><a href="policy.html" class="rule">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="access-statement.html" class="rule">Access Statement</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- .footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <div class="modal-content__header">
+                    <h4>Terms & Conditions</h4>
+                    <p>
+                        Please read this important information before confirming that you understand the information
+                        contained by clicking on the
+                        acceptance button at the foot of this window, which will then allow you to access our website
+                        and the information contained therein.
+                    </p>
+                </div>
+                <div class="modal-content__text">
+                    <p>
+                        Certain parts of the information contained in this website (the 'Website') constitute a
+                        financial promotion pursuant to section
+                        21 of the Financial Services and Markets Act 2000 ('FSMA') and is issued by Innvotec (the
+                        'Manager') which is authorised and
+                        regulated by the Financial Conduct Authority in the United Kingdom and whose registered office
+                        is at Painters Hall, 9 Little Lane,
+                        London, EC4V 2AD.
+                    </p>
+
+                    <p>The Website is not directed at, and should not be accessed by, persons in any jurisdiction other
+                        than the United Kingdom.</p>
+
+                    <p>
+                        If you are in any doubt about the action you should take in regard to the contents of the
+                        Website, you should contact an independent
+                        financial adviser or other professional adviser authorised under FSMA who specialises in
+                        advising on investments of the type referred
+                        to in the Website. Reliance on the information in the Website for the purpose of engaging in any
+                        investment activity may expose an individual
+                        to a significant risk of losing all of the property or other assets invested. Nothing in the
+                        Website constitutes investment, tax, financial,
+                        regulatory or other advice by the Manager.
+                    </p>
+
+                    <p>
+                        The Website contains general information regarding EIS Funds, Seed EIS Funds and SITR Funds
+                        (together the 'Funds'). The contents of the Website is
+                        provided for information purposes only and does not, nor is it intended to, constitute an offer
+                        or solicitation to any person in any jurisdiction
+                        to purchase or sell any investment. The information available on the Website is subject at all
+                        times to the full terms of the Information Memoranda
+                        relating to the Funds (the 'Information Memoranda'), which should be read in their entirety
+                        before a decision to invest in the Fund is made.
+                        In particular, your attention is drawn to the risk factors relating to an investment in the
+                        Funds.
+                    </p>
+
+                    <ul>
+                        <li>You have read and understood the regulatory information set out above;</li>
+
+                        <li>
+                            You are not aware of any limitation or restriction prohibiting you from accessing the
+                            information contained in the Website;
+                        </li>
+
+                        <li>To be bound by the terms and conditions set out above;</li>
+
+                        <li>
+                            If you are unable to agree to the terms outlined above, or you are resident in any
+                            jurisdiction
+                            where access to the Website and the information contained within it is not permitted, then
+                            please exit the Website immediately.
+                        </li>
+                    </ul>
+
+                    <h5>Innvotec Limited does not accept any responsibility for any unauthorised access to the
+                        Website.</h5>
+
+                    <h5>
+                        I certify that I am not a US person. Innvotec Limited is not registered as an investment advisor
+                        with the SEC and therefore this website is
+                        neither directed at nor intended for US investors.
+                    </h5>
+                </div>
+                <div class="modal-content__accept">
+                    <form class="modal-content__form" action="">
+                        <label class="modal-content__checkbox" data-dismiss="modal" aria-label="Close">Yes, I accept
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </form>
+                </div>
+                <div class="modal-content__policy">
+                    <h5>Cookie Warning</h5>
+                    <p>Innvotec Limited does use cookies on its website.</p>
+                    <p>Your personal data is not currently collected by Innvotec Limited using cookies. Further details
+                        are available in our
+                        <a href="policy.html">cookie policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/termsModal.js"></script>
+</body>
+</html>

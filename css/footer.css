@@ -1,0 +1,32 @@
+.footer .footer-info-block {
+  margin-bottom: 78px;
+}
+.footer .footer-logo {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.footer span.copyright, .footer p.footer-info, .footer .list-inline-item {
+  font-size: 12px;
+}
+.footer span.copyright {
+  color: #86868B;
+  margin-right: 77px;
+}
+.footer p.footer-info {
+  margin: 0;
+}
+.footer p.footer-info:first-child {
+  padding-bottom: 10px;
+}
+.footer .rule {
+  margin-right: 77px;
+}
+.footer .rule, .footer p.footer-info {
+  color: #1d1d1d;
+}
+
+.list-inline {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=footer.css.map */

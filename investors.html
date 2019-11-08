@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <title>Investors</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <!--        <object type="text/html" data="header.html"></object>-->
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <svg width="65" height="44" viewBox="0 0 65 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g style="mix-blend-mode:screen">
+                            <rect width="65" height="44" fill="url(#pattern0)"/>
+                        </g>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="translate(0 -0.25) scale(0.005 0.00738636)"/>
+                            </pattern>
+                            <image id="image0" width="200" height="200"
+                                   xlink:href="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0MCA3OS4xNjA0NTEsIDIwMTcvMDUvMDYtMDE6MDg6MjEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MUU3RkM3OURCN0IxMUU5QTc2RkE3REE0MzZFNjg4RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MUU3RkM3QURCN0IxMUU5QTc2RkE3REE0MzZFNjg4RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcxRTdGQzc3REI3QjExRTlBNzZGQTdEQTQzNkU2ODhGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjcxRTdGQzc4REI3QjExRTlBNzZGQTdEQTQzNkU2ODhGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEB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kkbxzRxSpoP4W+YnhDU1kKHzNntHxlpm2PFjZUtfK2WLlOtk22p+EqsS5rIBylmbhR3YD6WU/wAT8y6Ze5WbHPfCDnmIu5J+B3VrlcSW+iOV1trpQSdFbfpbPtGgMgljLn19lB6VsV1h+0g6p5JYR2/ZVpe4HOhP4ySKKS9smYaDWMwB7tN/5wje2ZU/N9+Ujce2X3yrdLaiql2FdyJoNXLjNKdbpKDjvcx7KW4kj8MMPaekzlK26vx4I3pbSPJ+qhwDG+Hve19epa3WMtrKFzoZZr21aNR9pFvLPKR/BjY/gqT8r59eMGPsJb2yzd3fzRISIYMdkFlcgahVa5treAMfgPcmRftYD1qm/uX8l297I18/jzDVb/HHEklRIsK9UtErWbNDUlTjRamwin+Rg1BpQ2r9LiG42bhK+vJko9jaLydF+K/Heq7lOTZ6ZcpzRR9Em3bb2uq6N93RvqeT1YG4k2tt0EcURLFs2fJnzk5V3RZT8L4fbvheu5fSVCwa8vQGJ0uZEPtxQkBD91hMgZg3vXEyMIlrAFsaoTQKUClApQKUClApQKUClApQKUClApQKUClApXyRmRkZGZGR+SMvQyMvsMj/ABD4+h+FfoJB1HoRU1es/ffnzq/HZz+Ttq/UcfJkvSHOPdiw/YUURcuYmXOkZ2VGkRLbNS5C1PK9sZ/8ip99bzsV1wzM4J7V8duuO25Dkc1BJack2gC9tSsczBV2qswZWjnUAKAZEMqqgSOVF9KtH0Z5d9t9DwJhsDPDkOGK7McdeBngTe4eRrZ1ZZrV2+s6I5tzJI0sltJISx+vul3Bc7g6vGap7j5HHzuTy0jOOQ2tSrUN2S5Fq5aKnIeVnc+uClKnDQTJk/8Aj7/uH9dE9Kp0lg77CJkjkkvLwThzb/dygEax7CBNNv8Azdd2q/HTb86/nyf8lG8ks5is0+GGGbG2UkBQXf3sS+5KJN4P3a22aabduj6/Hd8qhaJ0qrtApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKV/9k="/>
+                        </defs>
+                    </svg>
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- About Us -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="about" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">About Us</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="about">
+                                <a class="dropdown-item" href="what-we-are.html">Who We Are</a>
+                                <a class="dropdown-item" href="what-we-do.html">What We Do</a>
+                                <a class="dropdown-item" href="seed-angel.html">Seed/Angel Investing</a>
+                                <a class="dropdown-item" href="partner.html">Partners</a>
+                            </div>
+                        </li>
+
+                        <!-- Team -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="team" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Team</a>
+                            <div class="dropdown-menu" aria-labelledby="team">
+                                <a class="dropdown-item" href="management-team.html">Management Team</a>
+                                <a class="dropdown-item" href="advisors.html">Advisors</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active-link" href="investors.html">Investors</a>
+                        </li>
+
+                        <!-- Funds -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="funds" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Funds</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="funds">
+                                <a class="dropdown-item" href="seis_fund.html">SEIS/EIS Fund</a>
+                                <a class="dropdown-item" href="gt_fund.html">Global Technology Fund</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="/news.html">News</a>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header><!-- .header-->
+
+    <main class="content">
+
+        <section class="header-content-block investors-img-block">
+            <div class="container header-content-block__wrapper">
+                <div class="header-content-block__title">
+                    <span class="header-img-block__small-title">Innvotec's</span>
+                    <h1 class="header-img-block__big-title">Investors</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="header-content-block investors-experience">
+            <div class="container header-content-block__wrapper section-padding">
+                <div class="header-content-block__title header-bottom-block">
+                    <span class="title__orange">investors experience</span>
+                    <p class="header-bottom-block__big-title">
+                        Innvotec has over thirty years of experience investing in private companies, primarily in the
+                        start-up and early-stage phase.
+                    </p>
+                    <p class="header-bottom-block__big-title">
+                        As well as focusing on venture capital and developing an increasingly broad range of specialist
+                        and generalist tax-efficient
+                        funds, Innvotec increasingly seeks to identify investment opportunities from around the world,
+                        raise funds for investment within
+                        the broad remit of Private Equity and explore other investment opportunities compatible with its
+                        status as an Alternative
+                        Investment Fund Manager.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="investors-advantages">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-md-3 col-sm-6 advantages-block what-we-list-items">
+                            <div class="d-flex flex-row align-items-center">
+                                <div class="p-2">
+                                    <a href="#private-investing" class="investors-link">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="40" cy="40" r="39" stroke="black" stroke-width="2"/>
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M49.875 55.3401L49.8824 57.9637C49.8856 59.0896 50.7992 60.0001 51.9244 60.0001C51.9263 60.0001 51.9284 60.0001 51.9303 60.0001C53.0582 59.9969 53.9699 59.0799 53.9667 57.9521L53.9594 55.3401H49.875Z"
+                                                  fill="black"/>
+                                            <path d="M44.8714 54.8176L44.8711 57.9577C44.871 59.0856 45.7852 59.9999 46.9131 60C46.9132 60 46.9132 60 46.9133 60C48.0411 60 48.9555 59.0858 48.9555 57.958L48.9556 55.3399H46.3561C45.7948 55.3401 45.2786 55.1442 44.8714 54.8176Z"
+                                                  fill="black"/>
+                                            <path d="M27.9138 27.0541C29.8617 27.0541 31.4408 25.475 31.4408 23.5271C31.4408 21.5791 29.8617 20 27.9138 20C25.9658 20 24.3867 21.5791 24.3867 23.5271C24.3867 25.475 25.9658 27.0541 27.9138 27.0541Z"
+                                                  fill="black"/>
+                                            <path d="M36.7016 34.363L31.3577 33.7361L27.8629 30.2637L31.1778 32.0016L32.4 32.1449V30.6353C32.4 29.3195 31.3333 28.2527 30.0173 28.2527H25.7683C24.4525 28.2527 23.3857 29.3195 23.3857 30.6353L23.3438 57.9521C23.3405 59.0799 24.2523 59.9969 25.3802 60.0001C25.3822 60.0001 25.3841 60.0001 25.3861 60.0001C26.5112 60.0001 27.4249 59.0896 27.4281 57.9637L27.4708 42.8656C27.4708 42.8637 27.4708 42.8618 27.4708 42.8599H28.3515L28.3526 57.9581C28.3527 59.0859 29.2671 60.0003 30.3949 60.0002C31.5227 60.0001 32.4371 59.0857 32.437 57.9579C32.4356 39.7924 32.3999 38.999 32.3999 38.999L30.1787 38.7384C29.4994 38.6587 28.6649 38.6749 28.1763 37.7724L25.4638 32.6782L29.3757 36.5652C29.646 36.8337 29.9986 37.0038 30.3769 37.0482L36.3049 37.7436C37.2393 37.8531 38.084 37.1843 38.1933 36.2517C38.303 35.3181 37.6351 34.4725 36.7016 34.363Z"
+                                                  fill="black"/>
+                                            <path d="M49.3981 27.0541C51.3461 27.0541 52.9252 25.475 52.9252 23.5271C52.9252 21.5791 51.3461 20 49.3981 20C47.4502 20 45.8711 21.5791 45.8711 23.5271C45.8711 25.475 47.4502 27.0541 49.3981 27.0541Z"
+                                                  fill="black"/>
+                                            <path d="M55.7526 46.137H53.9688C53.9688 45.0591 53.9688 44.8719 53.9688 43.6157C53.9688 43.1361 53.5801 42.7474 53.1006 42.7474H52.8303C52.9274 42.1431 53.5772 38.0966 53.6808 37.4515C53.726 37.1702 53.6998 36.8821 53.6048 36.6136L51.5897 30.9237L51.7106 31.1034L53.9234 34.3923V30.6353C53.9234 29.3195 52.8566 28.2527 51.5407 28.2527H47.2918C45.9759 28.2527 44.9091 29.3195 44.9091 30.6353V31.2407L39.4542 34.3589C39.8058 34.9702 39.9713 35.6956 39.8828 36.4498C39.7701 37.4107 39.2668 38.2303 38.5508 38.7702C38.6341 38.7387 38.7163 38.7011 38.7961 38.6555L44.909 35.1612L44.873 45.1828C45.5895 44.6088 46.2981 44.661 46.6648 44.661V43.6157C46.6648 42.6973 47.2025 41.8773 48.0108 41.4952L48.7865 36.6655L48.4756 33.1225L48.3813 32.0601L50.2513 37.3405C50.1612 37.9015 49.4838 42.1199 49.383 42.7474H49.0091C48.5296 42.7474 48.1409 43.1361 48.1409 43.6157C48.1409 44.8612 48.1409 45.0664 48.1409 46.137H46.3571C45.8588 46.137 45.4549 46.5409 45.4549 47.0392V52.9618C45.4549 53.4601 45.8588 53.864 46.3571 53.864H55.7526C56.2509 53.864 56.6548 53.46 56.6548 52.9618V47.0392C56.6549 46.5409 56.2509 46.137 55.7526 46.137ZM50.7461 44.9925C50.8376 45.0071 50.9284 45.0143 51.0181 45.0143C51.4006 45.0143 51.7609 44.8837 52.0512 44.6609H52.2323V46.1369H49.8773V44.6609H49.9776C50.195 44.8286 50.4561 44.9459 50.7461 44.9925Z"
+                                                  fill="black"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="40" height="40" fill="white" transform="translate(20 20)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                </div>
+                                <div class="p-2 advantages-header">
+                                    <a href="#private-investing" class="investors-link">Private (S)EIS Investing</a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    <div class="col-md-3 col-sm-6 advantages-block what-we-list-items">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-2">
+                                <a href="#private-investing" class="investors-link">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="40" cy="40" r="39" stroke="black" stroke-width="2"/>
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M58.1651 56.355H21.8178C20.8136 56.355 20 57.1686 20 58.1737C20 59.1771 20.8136 59.9907 21.8178 59.9907H58.1643C59.1685 59.9907 59.9821 59.1771 59.9821 58.1737C59.9813 57.1686 59.1677 56.355 58.1651 56.355Z"
+                                                  fill="black"/>
+                                            <path d="M24.0913 51.629C23.087 51.629 22.2734 52.4426 22.2734 53.4469C22.2734 54.4511 23.087 55.2656 24.0913 55.2656H55.8949C56.8991 55.2656 57.7127 54.4511 57.7127 53.4469C57.7127 52.4426 56.8991 51.629 55.8949 51.629H55.4412V35.2719H55.8949C56.3978 35.2719 56.8029 34.8651 56.8029 34.3639C56.8029 33.8626 56.3961 33.4558 55.8949 33.4558H24.0913C23.5892 33.4558 23.1832 33.8626 23.1832 34.3639C23.1832 34.8651 23.59 35.2719 24.0913 35.2719H24.5457V51.6282H24.0913V51.629ZM51.8056 35.2719V51.6282H46.3538V35.2719H51.8056ZM42.7181 35.2719V51.6282H37.2663V35.2719H42.7181ZM28.1797 35.2719H33.6315V51.6282H28.1797V35.2719Z"
+                                                  fill="black"/>
+                                            <path d="M21.8179 31.8245H58.1643C58.1703 31.8245 58.1771 31.8245 58.1822 31.8245C59.1873 31.8245 60 31.0109 60 30.0067C60 29.2084 59.486 28.5318 58.772 28.2867L40.7383 20.172C40.2643 19.9593 39.7222 19.9593 39.2473 20.172L21.0724 28.3497C20.2902 28.7021 19.8605 29.5514 20.0409 30.3888C20.2205 31.2263 20.9609 31.8245 21.8179 31.8245Z"
+                                                  fill="black"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="40" height="40" fill="white" transform="translate(20 20)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="p-2 advantages-header">
+                                <a href="#institutional" class="investors-link">Institutional Investing</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 advantages-block what-we-list-items">
+                        <div class="d-flex flex-row align-items-center">
+                            <div class="p-2">
+                                <a href="#advisors" class="investors-link">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <g clip-path="url(#clip1)">
+                                                <path d="M36.7973 29.0144V23.4057H57.3764V38.204H38.8406C36.0262 39.9514 36.2185 39.841 35.9801 39.9543H58.2516C58.7349 39.9543 59.1268 39.5625 59.1268 39.0791V22.5305C59.1268 22.0471 58.7349 21.6553 58.2516 21.6553H35.9221C35.4387 21.6553 35.0469 22.0471 35.0469 22.5305V26.8921C35.0469 26.8921 36.6163 27.7235 36.7973 29.0144Z"
+                                                      fill="black"/>
+                                                <path d="M46.4592 31.4413L45.0312 32.5673L45.6086 33.959C45.7024 34.1851 45.8868 34.3618 46.1168 34.4458C46.3468 34.5297 46.6015 34.5136 46.8191 34.401L50.6096 32.4402L54.4222 35.412C54.582 35.5365 54.7715 35.5969 54.9596 35.5969C55.2202 35.5969 55.4779 35.4811 55.6505 35.2597C55.9477 34.8785 55.8795 34.3286 55.4983 34.0314L51.2436 30.7149C50.974 30.5049 50.6071 30.4709 50.3034 30.6278L46.8607 32.4088L46.4592 31.4413Z"
+                                                      fill="black"/>
+                                                <path d="M44.6011 26.9592C44.4427 26.5774 44.0389 26.3583 43.6323 26.4342L40.6502 26.9902L39.3694 24.9593C39.1116 24.5504 38.5711 24.428 38.1624 24.6858C37.7535 24.9436 37.6311 25.484 37.8889 25.8928L39.4864 28.4263C39.6777 28.7297 40.0343 28.8857 40.3871 28.8199L43.0693 28.3198L44.6489 27.0743L44.6011 26.9592Z"
+                                                      fill="black"/>
+                                                <path d="M42.9109 31.9568C42.9821 32.0713 43.044 32.189 43.0989 32.3084L46.9597 29.2642C47.3393 28.9649 47.4044 28.4145 47.1051 28.035C46.8058 27.6555 46.2555 27.5903 45.876 27.8897L41.957 30.9797C42.3313 31.2243 42.6596 31.5519 42.9109 31.9568Z"
+                                                      fill="black"/>
+                                                <path d="M27.7789 43.1449C27.7789 42.9189 27.9622 42.7356 28.1882 42.7356C28.4143 42.7356 28.5975 42.9189 28.5975 43.1449V51.4805C29.4032 51.0147 30.3352 50.7454 31.3277 50.7406C30.8632 49.9756 30.5954 49.0785 30.5954 48.12C30.5954 46.5731 31.2932 45.1869 32.3897 44.2573C32.3897 44.2573 32.3564 43.2049 32.3554 31.3374C32.3554 31.1563 32.501 31.0089 32.6822 31.0067C32.8632 31.0045 33.0125 31.1485 33.0167 31.3295C33.0167 31.3295 33.0167 31.3295 33.0167 31.3295C33.0244 32.8546 33.041 36.1636 33.0458 37.1082C33.0487 37.6803 33.3606 38.2062 33.8613 38.483C34.3619 38.7599 34.9732 38.7444 35.4593 38.4426L41.0588 34.966C41.8002 34.5057 42.028 33.5315 41.5676 32.7902C41.1074 32.0489 40.1332 31.8208 39.3918 32.2812L36.1917 34.2682C36.1864 33.2244 36.1823 32.4024 36.1769 31.3137C36.1666 29.2641 34.4885 27.5933 32.4376 27.5933H30.8519L29.6646 30.7534L28.8555 32.8518L29.3296 30.6184C29.3625 30.4638 29.3387 30.3025 29.2625 30.1641L28.6201 28.9957L29.1745 27.9375C29.214 27.8655 29.2126 27.778 29.1709 27.7073C29.129 27.6366 29.0531 27.5933 28.9709 27.5933H27.4048C27.3227 27.5933 27.2467 27.6366 27.2049 27.7073C27.163 27.778 27.1617 27.8655 27.2013 27.9375L27.7881 28.9979L27.1445 30.1683C27.0697 30.3042 27.0454 30.4621 27.0756 30.6142L27.4862 32.8518L26.7423 30.7534L25.5239 27.5933H23.9381C21.8867 27.5933 20.2093 29.2623 20.1989 31.3138L20.1406 42.9219C20.1363 43.7946 20.8401 44.5055 21.7128 44.51C21.7155 44.51 21.7182 44.51 21.7209 44.51C22.5898 44.51 23.2964 43.8077 23.3008 42.9378L23.3592 31.3296C23.36 31.1568 23.5007 31.0173 23.6734 31.0177C23.8462 31.0182 23.9861 31.1584 23.9861 31.3312L23.9868 57.8911C23.9868 58.9113 24.7923 59.7428 25.802 59.7851L25.8198 56.2467C25.8282 54.5709 26.5891 53.0686 27.7789 52.0578V43.1449Z"
+                                                      fill="black"/>
+                                                <path d="M28.1888 26.5494C29.9973 26.5494 31.4635 25.0833 31.4635 23.2747C31.4635 21.4661 29.9973 20 28.1888 20C26.3802 20 24.9141 21.4661 24.9141 23.2747C24.9141 25.0833 26.3802 26.5494 28.1888 26.5494Z"
+                                                      fill="black"/>
+                                                <path d="M51.7788 51.4703C53.6091 51.4703 55.0929 49.9866 55.0929 48.1563C55.0929 46.326 53.6091 44.8423 51.7788 44.8423C49.9486 44.8423 48.4648 46.326 48.4648 48.1563C48.4648 49.9866 49.9486 51.4703 51.7788 51.4703Z"
+                                                      fill="black"/>
+                                                <path d="M59.8395 56.2918C59.8291 54.2157 58.1316 52.5267 56.0555 52.5267C55.1654 52.5267 48.363 52.5267 47.4711 52.5267C45.5149 52.5267 43.8955 54.0263 43.7061 55.936C43.5318 53.9903 41.8862 52.4905 39.9381 52.4905C39.048 52.4905 32.2456 52.4905 31.3537 52.4905C29.2775 52.4905 27.58 54.1795 27.5696 56.2555L27.5508 60.0001H30.7489L30.7676 56.2716C30.7685 56.1013 30.907 55.9638 31.0772 55.9643C31.2474 55.9647 31.3851 56.1029 31.3851 56.2731V60.0001H39.8549V56.264C39.8549 56.0792 40.0047 55.9294 40.1895 55.9294C40.3744 55.9294 40.5242 56.0792 40.5242 56.264C40.5242 56.2665 40.5242 56.269 40.5241 56.2716L40.5428 60.0001C42.881 60.0001 44.6268 60.0001 46.8665 60.0001L46.885 56.3078C46.8859 56.1375 47.0244 56.0001 47.1946 56.0005C47.3648 56.001 47.5025 56.1391 47.5025 56.3093V60H55.9722V56.3398C55.9722 56.1609 56.1127 56.0135 56.2914 56.0048C56.4701 55.9961 56.6244 56.1293 56.6415 56.3074C56.6415 56.3074 56.6415 56.3075 56.6415 56.3076L56.6601 59.9999H59.8582L59.8395 56.2918Z"
+                                                      fill="black"/>
+                                                <path d="M35.6617 44.8059C33.8844 44.8059 32.4405 46.2023 32.352 47.9494C32.2982 49.0095 32.7488 50.0541 33.6335 50.74C34.1942 51.1746 34.8975 51.434 35.6617 51.434C37.5442 51.434 39.0683 49.8601 38.9714 47.9494C38.8827 46.1998 37.4363 44.8059 35.6617 44.8059Z"
+                                                      fill="black"/>
+                                            </g>
+                                        </g>
+                                        <circle cx="40" cy="40" r="39" stroke="black" stroke-width="2"/>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="40" height="40" fill="white" transform="translate(19 20)"/>
+                                            </clipPath>
+                                            <clipPath id="clip1">
+                                                <rect width="40" height="40" fill="white" transform="translate(20 20)"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="p-2 advantages-header">
+                                <a href="#advisors" class="investors-link">Advisors</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="private-investing" class="private-investing">
+            <div class="container">
+
+                    <div class="private-investing__item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 private-investing__title">
+                                <h1 class="title__big">Private (S)EIS Investing</h1>
+                            </div>
+                            <div class="col-lg-8 col-md-12 private-investing__content">
+                                <p>
+                                    For the Private Investor, tax-efficient fund structures such as EIS and SEIS, enable
+                                    UK taxpayers to access a
+                                    diversified portfolio of early-stage and private companies that meet HMRC qualifying
+                                    status. These companies
+                                    have been identified as having the potential for significant Capital Growth, while
+                                    the structure of the fund
+                                    provides investors with tax reliefs which provide both downside protection and
+                                    increased returns.
+                                </p>
+                                <div class="private-investing__item-elems">
+                                    <span>HMRC qualifying status </span>
+                                    <span>Potential for Capital Growth</span>
+                                    <span>Provide with Tax Reliefs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="private-investing__item">
+                        <div class="row">
+                            <div class="col-sm-12 private-investing__title-small">
+                                <span class="title__orange">private (s)eis<br> investing</span>
+                            </div>
+                            <div class="col-lg-4 col-md-12 private-investing__title">
+                                <h1 class="title__big">eis Investing</h1>
+                            </div>
+                            <div class="col-lg-8 col-md-12 private-investing__content">
+                                <p>
+                                    Enterprise Investment Schemes (EIS) provide investors with the ability to hold a
+                                    diversified portfolio of
+                                    eligible start-up, early-stage and later-stage private companies. The EIS offers UK
+                                    private investors various
+                                    tax reliefs<span style="color: #FF6C00">*</span> including:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Individual Income Tax relief of up to 30% per year (limited to £1m invested per
+                                        tax year or £2m
+                                        if at least £1m of this is in knowledge-intensive businesses such as life
+                                        sciences);
+                                    </li>
+
+                                    <li>Capital Gains Tax relief on the sale of shares held for three years or more;
+                                    </li>
+
+                                    <li>Inheritance Tax relief on shares bought and held via the EIS for two years;</li>
+
+                                    <li>Loss relief on an investor’s at-risk investment as a proportion of the
+                                        individual’s tax rate;
+                                    </li>
+                                </ul>
+                                <span class="title__orange-italic">
+                                    * Investors should contact a qualified tax adviser and/or financial
+                                    advisor for appropriate advice.
+                                </span>
+                                <div class="private-investing__item-elems private-investing__btns">
+                                    <button class="btn btn__white">EIS Fund</button>
+                                    <button class="btn btn__white">Apply Online</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="private-investing__item">
+                        <div class="row">
+                            <div class="col-sm-12 private-investing__title-small">
+                                <span class="title__orange">private (s)eis<br> investing</span>
+                            </div>
+                            <div class="col-lg-4 col-md-12 private-investing__title">
+                                <h1 class="title__big">Seis Investing</h1>
+                            </div>
+                            <div class="col-lg-8 col-md-12 private-investing__content">
+                                <p>
+                                    A Seed Enterprise Investment Scheme (SEIS) is a management portfolio that invests in
+                                    eligible start- up ventures
+                                    and provides incentives in the form of tax reliefs to the UK investor. The tax
+                                    reliefs<span style="color: #FF6C00">* </span>
+                                    &nbsp;offered include:
+                                </p>
+                                <ul>
+                                    <li>50% Individual Income Tax relief on up to £100,000 invested;</li>
+
+                                    <li>Capital Gains Tax relief on the sale of shares held for three years or more;
+                                    </li>
+
+                                    <li>Loss relief as a proportion of investors’ tax rate;</li>
+                                </ul>
+                                <span class="title__orange-italic">
+                                    * Investors should contact a qualified tax adviser and/or financial
+                                    advisor for appropriate advice.
+                                </span>
+                                <div class="private-investing__item-elems private-investing__btns">
+                                    <button class="btn btn__white">SEIS Fund</button>
+                                    <button class="btn btn__white">Apply Online</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+        <section id="institutional" class="private-investing institutional">
+            <div class="container">
+                <div class="row">
+                    <div class="private-investing__item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 private-investing__title">
+                                <h1 class="title__big">Institutional Investing</h1>
+                            </div>
+                            <div class="col-lg-8 col-md-12 private-investing__content">
+                                <p>
+                                    Innvotec’s Global Technology Fund offers institutional investors the opportunity to
+                                    invest in early
+                                    stage technology companies around the world that Innvotec believes offer the
+                                    potential for above- average
+                                    Capital Growth.
+                                </p>
+                                <div class="private-investing__item-elems private-investing__btns">
+                                    <button class="btn btn__white">Global Technology Fund</button>
+                                    <button class="btn btn__white">Apply Online</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="advisors" class="private-investing advisors">
+            <div class="container">
+                <div class="row">
+                    <div class="private-investing__item">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12 private-investing__title">
+                                <h1 class="title__big">advisors</h1>
+                            </div>
+                            <div class="col-lg-8 col-md-12 private-investing__content">
+                                <p>
+                                    Innvotec’s tax efficient fund structures for both SEIS and EIS provide investors
+                                    with the opportunity to participate
+                                    in the growth of new and start up companies through a diversified portfolio.
+                                    The portfolios provide investors with various tax reliefs including Income Tax, CGT
+                                    and IHT.
+                                </p>
+                                <div class="private-investing__item-elems advisors__btns">
+                                    <button class="btn btn__white">EIS Fund</button>
+                                    <button class="btn btn__white">(S)EIS Fund</button>
+                                    <button class="btn btn__white">Global Technology Fund</button>
+                                    <button class="btn btn__white">Apply Online</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- .content -->
+
+</div>
+<!-- .wrapper -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <svg width="68" height="17" viewBox="0 0 68 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57.2063 7.56861L51.3033 7.50199C52.0095 4.71706 55.8338 4.02416 57.2063 7.56861ZM49.2513 15.9234L49.8642 16.03V13.858C48.2519 13.8847 46.3597 11.9392 46.373 10.4868L46.413 5.13013L49.7843 5.17011C49.1047 6.43598 48.5717 7.32876 48.8382 9.67396C49.3445 11.8859 51.2767 13.8447 53.7951 13.8713V12.1791C53.0755 11.9525 52.4359 11.7393 52.1028 11.2996C51.6231 10.74 51.3566 10.2736 51.2367 9.32751L57.4595 9.44744C57.5261 10.1803 57.8459 10.8332 58.1923 11.3929C58.8453 12.1391 59.2184 12.6854 60.0712 13.1918C60.5775 13.4849 61.0172 13.6448 61.5902 13.7781C63.3891 14.2045 67.0002 12.9919 67.6664 11.4195L66.2007 10.6067C66.1607 10.5801 65.8276 10.4202 65.6677 10.3535C63.629 12.6588 59.6847 11.8593 59.738 8.47471C59.7913 5.22341 64.1486 4.06413 65.6544 6.75578L67.4399 5.66313C66.5738 4.69041 65.9608 3.74433 64.655 3.38456C63.3624 3.0381 61.6302 3.06475 60.4576 3.70436C58.9652 4.53051 59.285 4.65043 58.4722 5.17011C57.8192 4.41058 56.7666 3.53113 55.7405 3.37123C54.2215 2.94483 48.585 3.17135 46.5196 3.1447V0H44.3077C44.3077 3.26463 44.1078 7.15554 44.321 10.3402C44.8407 14.2045 47.1992 14.7375 49.2246 15.8834L49.2513 15.9234Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.9597 9.42091C40.7065 10.3403 40.4134 10.82 39.6405 11.353C38.7478 11.9793 36.9889 12.006 36.1361 11.4863C34.7636 10.6468 34.084 9.19438 34.5504 7.63536C35.7629 3.5579 42.1323 5.18355 40.9597 9.40758V9.42091ZM32.0586 8.50148C32.0586 9.54083 32.4184 10.7001 32.9247 11.473C32.938 11.4996 32.9647 11.5396 32.9913 11.5662L33.1912 11.8194C33.2045 11.8461 33.2445 11.8727 33.2578 11.8994L33.6709 12.3791C35.5631 14.2446 38.8277 14.4311 40.973 13.1386C41.6659 12.7255 42.572 11.7128 42.9318 10.9933C45.2637 6.2229 40.0536 1.70572 35.5897 3.6112C34.1639 4.22415 32.9514 5.29015 32.4184 6.76923C32.2585 7.19563 32.0719 7.87521 32.0852 8.51481L32.0586 8.50148Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.08754 7.87516L3.10087 13.8314L5.33947 13.8581L5.36612 8.95449C5.36612 7.07566 5.63262 6.12959 6.9518 5.58326C8.29763 5.02361 9.65678 5.62324 10.2431 6.94241C10.3897 7.27554 10.4829 7.99509 10.4963 8.86122L10.5895 13.8448L12.6949 13.8314L12.7215 7.87516C12.7215 6.19621 11.962 4.74379 10.7361 3.94428L10.363 3.71776C9.1371 3.01153 7.31158 2.87828 6.05902 3.46458C4.15355 4.34403 3.07422 5.68986 3.07422 7.87516H3.08754Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1562 13.8979H27.0744C27.0744 13.8179 26.8346 13.9645 27.301 13.2183L33.4838 3.1979H30.912L26.4082 10.2602L26.3815 3.21122L24.2096 3.18457L24.1562 13.9112V13.8979Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.14299V13.8315H2.25193L2.30523 5.43677L0 6.14299Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.43676L2.22528 4.73053L2.30523 3.13153L0 3.09155V5.43676Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6461 7.87516L13.6595 13.8314L15.8981 13.8581L15.9247 8.95449C15.9247 7.07566 16.1912 6.12959 17.5104 5.58326C18.8562 5.02361 20.2154 5.62324 20.8017 6.94241C20.9482 7.27554 21.0415 7.99509 21.0548 8.86122L21.1481 13.8448L23.2535 13.8314L23.2801 7.87516C23.2801 6.19621 22.5206 4.74379 21.2947 3.94428L20.9216 3.71776C19.6957 3.01153 17.8702 2.87828 16.6176 3.46458C14.7121 4.34403 13.6328 5.68986 13.6328 7.87516H13.6461Z" fill="black"/>
+                </svg>
+
+            </div>
+        </div>
+        <div class="row footer-info-block">
+            <div class="col-md-12">
+                <p class="footer-info">Innvotec Limited is authorised and regulated by the Financial Conduct Authority (FCA) –
+                    FRN
+                    122365</p>
+                <p class="footer-info">Innvotec Limited is a registered company in England & Wales. Registration Number:
+                    02030086.<br>
+                    Registered Office: Painters Hall, 9 Little Trinity Lane, London, EC4V 2AD.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <span class="copyright">&copy; Copyright 2019, Innvotec Limited. All rights reserved.</span>
+                    </li>
+                    <li class="list-inline-item"><a href="terms.html" class="rule">Terms of use</a></li>
+                    <li class="list-inline-item"><a href="policy.html" class="rule">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="access-statement.html" class="rule">Access Statement</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- .footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <div class="modal-content__header">
+                    <h4>Terms & Conditions</h4>
+                    <p>
+                        Please read this important information before confirming that you understand the information
+                        contained by clicking on the
+                        acceptance button at the foot of this window, which will then allow you to access our website
+                        and the information contained therein.
+                    </p>
+                </div>
+                <div class="modal-content__text">
+                    <p>
+                        Certain parts of the information contained in this website (the 'Website') constitute a
+                        financial promotion pursuant to section
+                        21 of the Financial Services and Markets Act 2000 ('FSMA') and is issued by Innvotec (the
+                        'Manager') which is authorised and
+                        regulated by the Financial Conduct Authority in the United Kingdom and whose registered office
+                        is at Painters Hall, 9 Little Lane,
+                        London, EC4V 2AD.
+                    </p>
+
+                    <p>The Website is not directed at, and should not be accessed by, persons in any jurisdiction other
+                        than the United Kingdom.</p>
+
+                    <p>
+                        If you are in any doubt about the action you should take in regard to the contents of the
+                        Website, you should contact an independent
+                        financial adviser or other professional adviser authorised under FSMA who specialises in
+                        advising on investments of the type referred
+                        to in the Website. Reliance on the information in the Website for the purpose of engaging in any
+                        investment activity may expose an individual
+                        to a significant risk of losing all of the property or other assets invested. Nothing in the
+                        Website constitutes investment, tax, financial,
+                        regulatory or other advice by the Manager.
+                    </p>
+
+                    <p>
+                        The Website contains general information regarding EIS Funds, Seed EIS Funds and SITR Funds
+                        (together the 'Funds'). The contents of the Website is
+                        provided for information purposes only and does not, nor is it intended to, constitute an offer
+                        or solicitation to any person in any jurisdiction
+                        to purchase or sell any investment. The information available on the Website is subject at all
+                        times to the full terms of the Information Memoranda
+                        relating to the Funds (the 'Information Memoranda'), which should be read in their entirety
+                        before a decision to invest in the Fund is made.
+                        In particular, your attention is drawn to the risk factors relating to an investment in the
+                        Funds.
+                    </p>
+
+                    <ul>
+                        <li>You have read and understood the regulatory information set out above;</li>
+
+                        <li>
+                            You are not aware of any limitation or restriction prohibiting you from accessing the
+                            information contained in the Website;
+                        </li>
+
+                        <li>To be bound by the terms and conditions set out above;</li>
+
+                        <li>
+                            If you are unable to agree to the terms outlined above, or you are resident in any
+                            jurisdiction
+                            where access to the Website and the information contained within it is not permitted, then
+                            please exit the Website immediately.
+                        </li>
+                    </ul>
+
+                    <h5>Innvotec Limited does not accept any responsibility for any unauthorised access to the
+                        Website.</h5>
+
+                    <h5>
+                        I certify that I am not a US person. Innvotec Limited is not registered as an investment advisor
+                        with the SEC and therefore this website is
+                        neither directed at nor intended for US investors.
+                    </h5>
+                </div>
+                <div class="modal-content__accept">
+                    <form class="modal-content__form" action="">
+                        <label class="modal-content__checkbox" data-dismiss="modal" aria-label="Close">Yes, I accept
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </form>
+                </div>
+                <div class="modal-content__policy">
+                    <h5>Cookie Warning</h5>
+                    <p>Innvotec Limited does use cookies on its website.</p>
+                    <p>Your personal data is not currently collected by Innvotec Limited using cookies. Further details
+                        are available in our
+                        <a href="policy.html">cookie policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/termsModal.js"></script>
+<script type="text/javascript" src="js/links.js"></script>
+</body>
+</html>

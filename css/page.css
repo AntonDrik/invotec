@@ -1,0 +1,294 @@
+.advantages-section .advantages {
+  padding-top: 135px;
+  padding-bottom: 75px;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 600;
+  color: #1D1D1F;
+}
+.advantages-section .advantages-block {
+  max-width: 290px;
+  min-height: 235px;
+}
+.advantages-section .advantages-block h6 {
+  margin-top: 20px;
+  font-style: italic;
+  color: black;
+}
+.advantages-section right-arrow {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.advantages-section .advantages-post span {
+  font-family: "SF UI Text";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.advantages-header-non-arrow {
+  font-size: 21px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.advantages-header-non-arrow a {
+  color: #444444;
+  position: relative;
+  padding-right: 10px;
+}
+.advantages-header-non-arrow a:hover {
+  text-decoration: underline;
+  color: #0066CC;
+  cursor: pointer;
+}
+
+.advantages-header {
+  font-size: 21px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.advantages-header:hover span {
+  text-decoration: underline;
+  color: #0066CC;
+  cursor: pointer;
+}
+.advantages-header a {
+  color: #0066CC;
+  position: relative;
+  padding-right: 10px;
+}
+.advantages-header a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-bottom: 1px solid;
+  border-top: 0;
+  border-left: 1px solid;
+  height: 7px;
+  width: 7px;
+  -webkit-transform: rotate(225deg) translateY(50%);
+  -ms-transform: rotate(225deg) translateY(50%);
+  transform: rotate(225deg) translateY(50%);
+}
+
+.home-comp-adv-section {
+  background: url("/images/comp-adv-bg.png") no-repeat;
+  background-size: cover;
+}
+
+.ies-fund-comp-adv-section {
+  background: url("/images/funds_2.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-comp-adv-section, .ies-fund-comp-adv-section {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 135px;
+  margin-bottom: 135px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 503px;
+}
+.home-comp-adv-section .comp-adv-text, .ies-fund-comp-adv-section .comp-adv-text {
+  text-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+.home-comp-adv-section .comp-adv-text span, .ies-fund-comp-adv-section .comp-adv-text span {
+  color: #FFFFFF;
+  font-size: 28px;
+  width: 100px;
+}
+
+.what-we-do-divider {
+  background: url("/images/what-we-do-divider.png") no-repeat;
+}
+
+.main-slider {
+  position: relative;
+}
+
+#slide-1 {
+  background-image: url("/images/slide-1.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#slide-2 {
+  background-image: url("/images/slide-4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#slide-3 {
+  background-image: url("/images/slide-2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#slide-4 {
+  background-image: url("/images/slide-5.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#slide-5 {
+  background-image: url("/images/slide-3.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.slick-slide {
+  min-height: 724px !important;
+  outline: none;
+  border: none;
+}
+
+.slider-banner {
+  position: absolute;
+  z-index: 999;
+  top: 170px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.action {
+  position: absolute;
+  z-index: 999;
+  right: 245px;
+  bottom: 50px;
+  width: 220px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  line-height: 37px;
+  text-align: right;
+}
+.action a {
+  font-size: 16px;
+  line-height: 37px;
+  color: #ffffff;
+}
+.action a:hover {
+  text-decoration: none;
+}
+.action a.active {
+  border-bottom: 2px solid #ffffff;
+  font-size: 21px;
+}
+
+.slider-banner {
+  margin-left: 245px;
+}
+.slider-banner .banner-header p {
+  font-size: 86px;
+  line-height: 110%;
+  font-weight: bold;
+}
+.slider-banner .banner-post {
+  padding-bottom: 60px;
+}
+.slider-banner .banner-post p {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 29px;
+}
+.slider-banner .banner-header p, .slider-banner .banner-post p {
+  color: #ffffff;
+}
+.slider-banner .learn-more-btn {
+  border-radius: 30px;
+  background-color: #FF6C00;
+  border: 0;
+  font-size: 21px;
+  width: 166px;
+  min-height: 40px;
+}
+
+@media (max-width: 992px) {
+  .action {
+    right: 100px;
+  }
+
+  .slider-banner {
+    top: 200px;
+    margin-left: 100px;
+  }
+  .slider-banner .banner-header p {
+    font-size: 55px;
+  }
+
+  .banner-post {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .action {
+    right: 100px;
+  }
+
+  .slider-banner {
+    top: 200px;
+    margin-left: 15px;
+  }
+  .slider-banner .banner-header p {
+    font-size: 45px;
+  }
+
+  .banner-post {
+    padding-bottom: 30px;
+  }
+  .banner-post p {
+    max-width: 530px !important;
+    font-size: 16px !important;
+    line-height: 29px;
+  }
+}
+@media (max-width: 576px) {
+  .banner-post {
+    padding-bottom: 30px;
+  }
+  .banner-post p {
+    max-width: 330px !important;
+    font-size: 14px !important;
+    line-height: 29px;
+  }
+
+  .action {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+}

@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <title>EIS Fund</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <header class="header">
+        <!--        <object type="text/html" data="header.html"></object>-->
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="/">
+                    <svg width="65" height="44" viewBox="0 0 65 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g style="mix-blend-mode:screen">
+                            <rect width="65" height="44" fill="url(#pattern0)"/>
+                        </g>
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0" transform="translate(0 -0.25) scale(0.005 0.00738636)"/>
+                            </pattern>
+                            <image id="image0" width="200" height="200"
+                                   xlink:href="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0MCA3OS4xNjA0NTEsIDIwMTcvMDUvMDYtMDE6MDg6MjEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo3MUU3RkM3OURCN0IxMUU5QTc2RkE3REE0MzZFNjg4RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo3MUU3RkM3QURCN0IxMUU5QTc2RkE3REE0MzZFNjg4RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjcxRTdGQzc3REI3QjExRTlBNzZGQTdEQTQzNkU2ODhGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjcxRTdGQzc4REI3QjExRTlBNzZGQTdEQTQzNkU2ODhGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEB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kkbxzRxSpoP4W+YnhDU1kKHzNntHxlpm2PFjZUtfK2WLlOtk22p+EqsS5rIBylmbhR3YD6WU/wAT8y6Ze5WbHPfCDnmIu5J+B3VrlcSW+iOV1trpQSdFbfpbPtGgMgljLn19lB6VsV1h+0g6p5JYR2/ZVpe4HOhP4ySKKS9smYaDWMwB7tN/5wje2ZU/N9+Ujce2X3yrdLaiql2FdyJoNXLjNKdbpKDjvcx7KW4kj8MMPaekzlK26vx4I3pbSPJ+qhwDG+Hve19epa3WMtrKFzoZZr21aNR9pFvLPKR/BjY/gqT8r59eMGPsJb2yzd3fzRISIYMdkFlcgahVa5treAMfgPcmRftYD1qm/uX8l297I18/jzDVb/HHEklRIsK9UtErWbNDUlTjRamwin+Rg1BpQ2r9LiG42bhK+vJko9jaLydF+K/Heq7lOTZ6ZcpzRR9Em3bb2uq6N93RvqeT1YG4k2tt0EcURLFs2fJnzk5V3RZT8L4fbvheu5fSVCwa8vQGJ0uZEPtxQkBD91hMgZg3vXEyMIlrAFsaoTQKUClApQKUClApQKUClApQKUClApQKUClApXyRmRkZGZGR+SMvQyMvsMj/ABD4+h+FfoJB1HoRU1es/ffnzq/HZz+Ttq/UcfJkvSHOPdiw/YUURcuYmXOkZ2VGkRLbNS5C1PK9sZ/8ip99bzsV1wzM4J7V8duuO25Dkc1BJack2gC9tSsczBV2qswZWjnUAKAZEMqqgSOVF9KtH0Z5d9t9DwJhsDPDkOGK7McdeBngTe4eRrZ1ZZrV2+s6I5tzJI0sltJISx+vul3Bc7g6vGap7j5HHzuTy0jOOQ2tSrUN2S5Fq5aKnIeVnc+uClKnDQTJk/8Aj7/uH9dE9Kp0lg77CJkjkkvLwThzb/dygEax7CBNNv8Azdd2q/HTb86/nyf8lG8ks5is0+GGGbG2UkBQXf3sS+5KJN4P3a22aabduj6/Hd8qhaJ0qrtApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKUClApQKV/9k="/>
+                        </defs>
+                    </svg>
+                </a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- About Us -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="about" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">About Us</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="about">
+                                <a class="dropdown-item" href="what-we-are.html">Who We Are</a>
+                                <a class="dropdown-item" href="what-we-do.html">What We Do</a>
+                            </div>
+                        </li>
+
+                        <!-- Team -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="team" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Team</a>
+                            <div class="dropdown-menu" aria-labelledby="team">
+                                <a class="dropdown-item" href="management-team.html">Management Team</a>
+                                <a class="dropdown-item" href="advisors.html">Advisors</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="investors.html">Investors</a>
+                        </li>
+
+                        <!-- Funds -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="funds" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">Funds</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="funds">
+                                <a class="dropdown-item" href="eis_fund.html">EIS Fund</a>
+                                <a class="dropdown-item" href="seis_fund.html">SEIS Fund</a>
+                                <a class="dropdown-item" href="gt_fund.html">Global Technology Fund</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="/news.html">News</a>
+                        </li>
+
+                        <li class="nav-item contact-item">
+                            <a class="nav-link" href="/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- .header-->
+
+    <main class="content">
+
+        <section class="header-content-block eis-fund-header-img-block">
+            <div class="container header-content-block__wrapper">
+                <div class="header-content-block__title">
+                    <span class="header-img-block__small-title">Funds</span>
+                    <h1 class="header-img-block__big-title">EIS Fund</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="header-content-block header-bottom-block">
+            <div class="container header-content-block__wrapper">
+                <div class="header-content-block__title">
+                    <span class="title__orange">about fund</span>
+                    <h1 class="header-bottom-block__big-title">The Innvotec tax-efficient funds have to date been raised
+                        and invested alongside Strategic Partners, thereby combining the skills and knowledge of both
+                        Innvotec and the Strategic Partner’s own inhouse team. The Strategic Partners expertise can be
+                        either general or sector specific.</h1>
+                    <h1 class="header-bottom-block__big-title">The typical Innvotec tax-efficient Fund is classed as
+                        ‘evergreen’ because it raises investor commitment throughout the year and makes investments on a
+                        quarterly basis. This ensures that an investor’s commitment is held for no more than three
+                        months before being deployed.</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sectors -->
+        <section class="sectors-sector">
+            <div class="contaier">
+                <h1 class="text-center section-header">Sectors</h1>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M31.4903 7.08523L30.8588 3.94751H28.7886L28.157 7.08523C28.0914 7.41117 27.8472 7.67202 27.5263 7.75891C26.8015 7.95429 26.1053 8.24327 25.4552 8.61856C25.1656 8.78659 24.8055 8.77502 24.5272 8.58874L21.8702 6.80803L20.4079 8.27821L22.1833 10.9326C22.3696 11.2109 22.3812 11.571 22.2131 11.8607C21.8379 12.5107 21.5489 13.207 21.3535 13.9317C21.2666 14.2526 21.0057 14.4968 20.6798 14.5624L17.543 15.1931V17.2633L20.6807 17.894C21.0066 17.9596 21.2675 18.2038 21.3544 18.5247C21.5498 19.2495 21.8387 19.9457 22.214 20.5957C22.3821 20.8854 22.3705 21.2455 22.1842 21.5238L20.4035 24.1808L21.8737 25.6431L24.5281 23.8677C24.8064 23.6814 25.1664 23.6698 25.4561 23.8379C26.1062 24.2131 26.8024 24.5021 27.5272 24.6975C27.8481 24.7844 28.0923 25.0452 28.1579 25.3712L28.7886 28.5089H30.8588L31.4895 25.3712C31.555 25.0452 31.7992 24.7844 32.1202 24.6975C32.8449 24.5021 33.5411 24.2131 34.1912 23.8379C34.4809 23.6698 34.841 23.6814 35.1193 23.8677L37.7763 25.6484L39.2386 24.1782L37.4631 21.5238C37.2768 21.2455 37.2653 20.8854 37.4333 20.5957C37.8086 19.9457 38.0976 19.2495 38.293 18.5247C38.3799 18.2038 38.6407 17.9596 38.9666 17.894L42.1044 17.2633V15.1922L38.9666 14.5615C38.6407 14.496 38.3799 14.2518 38.293 13.9308C38.0976 13.2061 37.8086 12.5099 37.4333 11.8598C37.2653 11.5701 37.2768 11.21 37.4631 10.9317L39.2438 8.2747L37.7737 6.8133L35.1193 8.58874C34.841 8.77502 34.4809 8.78659 34.1912 8.61856C33.5411 8.24327 32.8449 7.95429 32.1202 7.75891C31.7996 7.67173 31.5558 7.41094 31.4903 7.08523ZM35.964 16.2282C35.964 19.6194 33.2149 22.3686 29.8237 22.3686C26.4324 22.3686 23.6833 19.6194 23.6833 16.2282C23.6833 12.837 26.4324 10.0879 29.8237 10.0879C33.2133 10.0917 35.9601 12.8386 35.964 16.2282Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M39.2188 11.4685C39.4609 11.9445 39.6662 12.4383 39.8328 12.9457L41.1644 13.2089C42.5342 12.5239 43.2975 11.026 43.0466 9.51514C42.7957 8.00428 41.5891 6.83351 40.0714 6.62817L40.481 7.03782C41.0701 7.62516 41.1657 8.54544 40.71 9.24133L39.2188 11.4685Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M25.4375 16.2283C25.4375 18.6506 27.4012 20.6142 29.8235 20.6142C32.2458 20.6142 34.2094 18.6506 34.2094 16.2283C34.2094 13.806 32.2458 11.8423 29.8235 11.8423C27.4024 11.8452 25.4404 13.8072 25.4375 16.2283ZM30.7007 16.2283C30.7007 16.7127 30.3079 17.1054 29.8235 17.1054C29.339 17.1054 28.9463 16.7127 28.9463 16.2283C28.9463 15.7438 29.339 15.3511 29.8235 15.3511C30.3079 15.3511 30.7007 15.7438 30.7007 16.2283Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M0.557963 30.0308C0.786925 30.1905 1.02868 30.3311 1.28077 30.451C2.02902 30.8334 3.05358 31.358 3.26498 32.4273C3.39058 33.0902 3.3088 33.7757 3.03077 34.3905C2.87814 34.7159 2.72024 34.9966 2.58252 35.2387C2.54042 35.3141 2.49481 35.3984 2.45007 35.4747C2.8141 35.7677 3.31059 36.1396 3.52112 36.294C3.71261 36.4349 3.83866 36.6476 3.87041 36.8833C3.90217 37.1189 3.83689 37.3573 3.68954 37.544C3.55913 37.7134 3.44571 37.8953 3.35095 38.087C3.41323 38.1238 3.47638 38.1598 3.53954 38.1957C4.31233 38.5292 4.90222 39.1819 5.15621 39.9843C5.28631 40.6107 5.25766 41.2596 5.07288 41.872C5.03165 42.0519 4.99042 42.2317 4.96498 42.4115C4.91799 42.9394 4.99209 43.471 5.18165 43.9659C5.37622 44.7747 6.17134 45.2885 6.98866 45.1334C9.54498 44.5186 12.0638 43.7571 14.5325 42.8527H14.5378C15.4509 42.5422 16.279 42.2527 16.9308 42.0255C17.5387 41.8124 17.9974 41.6527 18.236 41.5764C21.8825 40.4141 22.622 39.101 22.6009 38.2036C22.5897 37.7194 22.9729 37.3177 23.4571 37.3062C23.6905 37.2975 23.9176 37.3835 24.0866 37.5448C24.2556 37.706 24.3522 37.9288 24.3545 38.1624C24.4062 40.3396 22.5273 42.0501 18.7711 43.2501C18.5413 43.3238 18.0974 43.4782 17.5097 43.6887L16.7202 43.9641C18.1662 45.567 19.2216 47.4828 19.8036 49.5615L39.7001 49.5062L39.6413 49.4185C39.3889 49.0544 39.1618 48.6734 38.9615 48.2782C38.5252 47.3917 38.1612 46.4715 37.8729 45.5264C37.3406 43.7308 36.9713 41.8909 36.7694 40.0291C36.4234 37.0944 36.8674 34.1207 38.0553 31.415C38.7557 29.9508 39.6219 28.5719 40.6369 27.3054C41.1457 26.6194 41.672 25.9106 42.1281 25.1905C43.3432 23.3141 43.9961 21.1293 44.0097 18.894C44.015 18.6957 44.0097 18.4984 44.0053 18.301L43.6606 18.0703C43.418 18.5441 42.9727 18.8816 42.4509 18.987L39.8299 19.5133C39.6633 20.0206 39.458 20.5145 39.2159 20.9905L40.7018 23.2045C41.1681 23.9053 41.0709 24.8385 40.4702 25.4282L39.015 26.8834C38.4276 27.4725 37.5074 27.5681 36.8115 27.1124L34.5843 25.6212C34.1083 25.8633 33.6145 26.0686 33.1071 26.2352L32.5808 28.8598C32.4139 29.6774 31.6942 30.2643 30.8597 30.2633H28.7895C27.9532 30.2637 27.2328 29.6737 27.0685 28.8536L26.5422 26.2326C26.0348 26.066 25.541 25.8607 25.065 25.6185L22.8483 27.1054C22.1474 27.5692 21.2162 27.4726 20.6255 26.8747L19.1694 25.4185C18.5803 24.8312 18.4847 23.9109 18.9404 23.215L20.4316 20.9878C20.1895 20.5119 19.9842 20.018 19.8176 19.5106L17.193 18.9843C16.3754 18.8174 15.7885 18.0977 15.7895 17.2633V15.1931C15.7891 14.3567 16.3791 13.6364 17.1992 13.472L19.8202 12.9457C19.9869 12.4384 20.1921 11.9445 20.4343 11.4685L18.9474 9.25186C18.4812 8.55106 18.5784 7.61788 19.179 7.02818L20.6343 5.57292C21.2216 4.98386 22.1419 4.88824 22.8378 5.34397L25.065 6.8352C25.541 6.59305 26.0348 6.38777 26.5422 6.22116L27.0685 3.5966C27.2354 2.779 27.9551 2.19209 28.7895 2.19309H30.8597C30.9758 2.19418 31.0916 2.20652 31.2053 2.22994L31.9246 1.51064C29.6127 0.676272 27.1555 0.319953 24.7018 0.463269C21.9339 0.657906 19.1839 1.05428 16.4738 1.64923C12.9334 2.35099 10.2887 3.60976 8.61059 5.38344C7.22565 6.86819 6.15509 8.61754 5.46323 10.5264C5.13846 11.4759 4.87476 12.4451 4.67375 13.4282C4.46028 14.2478 4.16646 15.0443 3.79656 15.8062C3.63165 16.1755 3.46586 16.544 3.32288 16.9194C3.2373 17.1161 3.18911 17.327 3.18077 17.5413C3.21849 17.8045 3.55445 18.1098 3.91059 18.4352C4.63667 18.9454 5.1058 19.7454 5.19656 20.6282C5.18045 21.0449 5.06432 21.4517 4.85796 21.8141C3.76018 24.1259 2.41488 26.3118 0.845682 28.3334C0.178139 29.1466 0.038665 29.4685 0.0351562 29.6019C0.196103 29.7604 0.371088 29.9039 0.557963 30.0308ZM6.55358 12.9387C6.69144 12.3293 6.86424 11.7283 7.07112 11.1387C7.6809 9.45031 8.6262 7.90285 9.85007 6.58958C11.2746 5.08783 13.6106 4.00011 16.7939 3.36678C17.2692 3.27255 17.7308 3.58143 17.8251 4.05669C17.9193 4.53195 17.6104 4.9936 17.1352 5.08783C14.3159 5.64836 12.2939 6.55976 11.1246 7.79485C10.0646 8.93507 9.24586 10.2777 8.71761 11.7422C8.53389 12.2696 8.38042 12.807 8.25796 13.3519C8.1848 13.6575 7.95369 13.9007 7.65214 13.9893C7.35059 14.0779 7.02469 13.9984 6.79781 13.7809C6.57094 13.5634 6.47777 13.2411 6.55358 12.9361V12.9387ZM6.14042 16.2282C6.62488 16.2282 7.01761 16.6209 7.01761 17.1054C7.01761 17.5898 6.62488 17.9826 6.14042 17.9826C5.65596 17.9826 5.26323 17.5898 5.26323 17.1054C5.26323 16.6209 5.65596 16.2282 6.14042 16.2282Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M25.4375 16.2283C25.4375 18.6506 27.4012 20.6142 29.8235 20.6142C32.2458 20.6142 34.2094 18.6506 34.2094 16.2283C34.2094 13.806 32.2458 11.8423 29.8235 11.8423C27.4024 11.8452 25.4404 13.8072 25.4375 16.2283ZM30.7007 16.2283C30.7007 16.7127 30.3079 17.1054 29.8235 17.1054C29.339 17.1054 28.9463 16.7127 28.9463 16.2283C28.9463 15.7438 29.339 15.3511 29.8235 15.3511C30.3079 15.3511 30.7007 15.7438 30.7007 16.2283Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M0.557963 30.0308C0.786925 30.1905 1.02868 30.3311 1.28077 30.451C2.02902 30.8334 3.05358 31.358 3.26498 32.4273C3.39058 33.0902 3.3088 33.7757 3.03077 34.3905C2.87814 34.7159 2.72024 34.9966 2.58252 35.2387C2.54042 35.3141 2.49481 35.3984 2.45007 35.4747C2.8141 35.7677 3.31059 36.1396 3.52112 36.294C3.71261 36.4349 3.83866 36.6476 3.87041 36.8833C3.90217 37.1189 3.83689 37.3573 3.68954 37.544C3.55913 37.7134 3.44571 37.8953 3.35095 38.087C3.41323 38.1238 3.47638 38.1598 3.53954 38.1957C4.31233 38.5292 4.90222 39.1819 5.15621 39.9843C5.28631 40.6107 5.25766 41.2596 5.07288 41.872C5.03165 42.0519 4.99042 42.2317 4.96498 42.4115C4.91799 42.9394 4.99209 43.471 5.18165 43.9659C5.37622 44.7747 6.17134 45.2885 6.98866 45.1334C9.54498 44.5186 12.0638 43.7571 14.5325 42.8527H14.5378C15.4509 42.5422 16.279 42.2527 16.9308 42.0255C17.5387 41.8124 17.9974 41.6527 18.236 41.5764C21.8825 40.4141 22.622 39.101 22.6009 38.2036C22.5897 37.7194 22.9729 37.3177 23.4571 37.3062C23.6905 37.2975 23.9176 37.3835 24.0866 37.5448C24.2556 37.706 24.3522 37.9288 24.3545 38.1624C24.4062 40.3396 22.5273 42.0501 18.7711 43.2501C18.5413 43.3238 18.0974 43.4782 17.5097 43.6887L16.7202 43.9641C18.1662 45.567 19.2216 47.4828 19.8036 49.5615L39.7001 49.5062L39.6413 49.4185C39.3889 49.0544 39.1618 48.6734 38.9615 48.2782C38.5252 47.3917 38.1612 46.4715 37.8729 45.5264C37.3406 43.7308 36.9713 41.8909 36.7694 40.0291C36.4234 37.0944 36.8674 34.1207 38.0553 31.415C38.7557 29.9508 39.6219 28.5719 40.6369 27.3054C41.1457 26.6194 41.672 25.9106 42.1281 25.1905C43.3432 23.3141 43.9961 21.1293 44.0097 18.894C44.015 18.6957 44.0097 18.4984 44.0053 18.301L43.6606 18.0703C43.418 18.5441 42.9727 18.8816 42.4509 18.987L39.8299 19.5133C39.6633 20.0206 39.458 20.5145 39.2159 20.9905L40.7018 23.2045C41.1681 23.9053 41.0709 24.8385 40.4702 25.4282L39.015 26.8834C38.4276 27.4725 37.5074 27.5681 36.8115 27.1124L34.5843 25.6212C34.1083 25.8633 33.6145 26.0686 33.1071 26.2352L32.5808 28.8598C32.4139 29.6774 31.6942 30.2643 30.8597 30.2633H28.7895C27.9532 30.2637 27.2328 29.6737 27.0685 28.8536L26.5422 26.2326C26.0348 26.066 25.541 25.8607 25.065 25.6185L22.8483 27.1054C22.1474 27.5692 21.2162 27.4726 20.6255 26.8747L19.1694 25.4185C18.5803 24.8312 18.4847 23.9109 18.9404 23.215L20.4316 20.9878C20.1895 20.5119 19.9842 20.018 19.8176 19.5106L17.193 18.9843C16.3754 18.8174 15.7885 18.0977 15.7895 17.2633V15.1931C15.7891 14.3567 16.3791 13.6364 17.1992 13.472L19.8202 12.9457C19.9869 12.4384 20.1921 11.9445 20.4343 11.4685L18.9474 9.25186C18.4812 8.55106 18.5784 7.61788 19.179 7.02818L20.6343 5.57292C21.2216 4.98386 22.1419 4.88824 22.8378 5.34397L25.065 6.8352C25.541 6.59305 26.0348 6.38777 26.5422 6.22116L27.0685 3.5966C27.2354 2.779 27.9551 2.19209 28.7895 2.19309H30.8597C30.9758 2.19418 31.0916 2.20652 31.2053 2.22994L31.9246 1.51064C29.6127 0.676272 27.1555 0.319953 24.7018 0.463269C21.9339 0.657906 19.1839 1.05428 16.4738 1.64923C12.9334 2.35099 10.2887 3.60976 8.61059 5.38344C7.22565 6.86819 6.15509 8.61754 5.46323 10.5264C5.13846 11.4759 4.87476 12.4451 4.67375 13.4282C4.46028 14.2478 4.16646 15.0443 3.79656 15.8062C3.63165 16.1755 3.46586 16.544 3.32288 16.9194C3.2373 17.1161 3.18911 17.327 3.18077 17.5413C3.21849 17.8045 3.55445 18.1098 3.91059 18.4352C4.63667 18.9454 5.1058 19.7454 5.19656 20.6282C5.18045 21.0449 5.06432 21.4517 4.85796 21.8141C3.76018 24.1259 2.41488 26.3118 0.845682 28.3334C0.178139 29.1466 0.038665 29.4685 0.0351562 29.6019C0.196103 29.7604 0.371088 29.9039 0.557963 30.0308ZM6.55358 12.9387C6.69144 12.3293 6.86424 11.7283 7.07112 11.1387C7.6809 9.45031 8.6262 7.90285 9.85007 6.58958C11.2746 5.08783 13.6106 4.00011 16.7939 3.36678C17.2692 3.27255 17.7308 3.58143 17.8251 4.05669C17.9193 4.53195 17.6104 4.9936 17.1352 5.08783C14.3159 5.64836 12.2939 6.55976 11.1246 7.79485C10.0646 8.93507 9.24586 10.2777 8.71761 11.7422C8.53389 12.2696 8.38042 12.807 8.25796 13.3519C8.1848 13.6575 7.95369 13.9007 7.65214 13.9893C7.35059 14.0779 7.02469 13.9984 6.79781 13.7809C6.57094 13.5634 6.47777 13.2411 6.55358 12.9361V12.9387ZM6.14042 16.2282C6.62488 16.2282 7.01761 16.6209 7.01761 17.1054C7.01761 17.5898 6.62488 17.9826 6.14042 17.9826C5.65596 17.9826 5.26323 17.5898 5.26323 17.1054C5.26323 16.6209 5.65596 16.2282 6.14042 16.2282Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M33.1068 6.22819C33.6141 6.39481 34.108 6.60009 34.584 6.84223L36.8006 5.351C37.1634 5.11445 37.6001 5.01838 38.0287 5.08083C38.5317 4.91463 39.0577 4.8282 39.5875 4.82469C41.733 4.81747 43.6671 6.11631 44.4723 8.10506C45.2774 10.0938 44.7916 12.3723 43.2454 13.8598C43.6345 14.1935 43.8587 14.6804 43.8594 15.1931V16.0896L45.8094 17.3975L46.7831 16.4238L45.4383 14.4185C45.2498 14.1373 45.2399 13.7727 45.4129 13.4817C45.7084 12.9796 45.9342 12.4395 46.0839 11.8764C46.1708 11.5547 46.4325 11.31 46.7594 11.2449L49.1278 10.7738V9.40188L46.7638 8.93083C46.4369 8.8657 46.1752 8.62099 46.0883 8.29925C45.9386 7.73618 45.7128 7.19612 45.4173 6.69398C45.2429 6.4038 45.2511 6.0392 45.4383 5.75714L46.7839 3.75188L45.8103 2.77819L43.8041 4.12293C43.5229 4.3115 43.1583 4.3214 42.8673 4.14837C42.3651 3.85284 41.8251 3.62708 41.262 3.47732C40.9403 3.39043 40.6956 3.12872 40.6304 2.80188L40.1594 0.438721H38.7875L38.3164 2.80714C38.2513 3.13398 38.0066 3.39569 37.6848 3.48258C37.1218 3.63235 36.5817 3.85811 36.0796 4.15363C35.7875 4.32509 35.4229 4.31314 35.1427 4.12293L33.1375 2.77819L32.5234 3.39223C32.5482 3.4598 32.5684 3.52897 32.584 3.59925L33.1068 6.22819Z"
+                                                          fill="#FF6C00"/>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Artificial<br>Intelligence </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M25 50C38.8071 50 50 38.8071 50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M19.0428 27.1512C19.9699 24.5798 20.8226 21.662 21.7311 19.127C21.9907 18.4158 22.4171 18.0511 23.1401 18.0511C23.9004 18.0511 24.7533 18.7988 24.7533 19.583C24.7533 19.7654 24.6976 19.9659 24.6235 20.1119L20.8226 30.6527C20.4331 31.7288 19.8401 32.2577 19.0242 32.2577C18.264 32.2577 17.7078 31.7653 17.3555 30.7987L13.4246 20.0752C13.3691 19.8747 13.332 19.6741 13.332 19.4917C13.332 18.5253 13.8327 18.0327 14.8152 18.0327C15.5568 18.0327 16.0576 18.3974 16.2985 19.1088L19.0428 27.1512Z"
+                                                          fill="#F9F9F9"/>
+                                                    <path d="M25.4961 19.5828C25.4961 18.5433 26.1264 18.0691 27.3315 18.0691H31.0211C34.1361 18.0691 35.8602 20.148 35.8602 22.3183C35.8602 23.7042 35.1742 25.1086 33.6725 26.0568L35.4709 29.9231C35.6007 30.2331 35.7119 30.5614 35.7119 30.8713C35.7119 31.692 35.2668 32.2755 34.3028 32.2755C33.7836 32.2755 33.283 32.1113 32.9495 31.4732L30.6132 26.8045H28.4626V30.6523C28.4626 31.7284 27.9805 32.2572 26.998 32.2572C25.9967 32.2572 25.4961 31.7284 25.4961 30.6523V19.5828ZM28.4626 20.987V23.9048H31.1511C32.1892 23.9048 32.8198 23.0841 32.8198 22.3183C32.8198 21.6435 32.319 20.987 31.1511 20.987H28.4626Z"
+                                                          fill="#F9F9F9"/>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Virtual<br>Reality </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="32" height="50" viewBox="0 0 32 50" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                          d="M28.4717 22.2222H28.9444C30.6013 22.2222 31.9444 23.5653 31.9444 25.2222V47C31.9444 48.6568 30.6013 50 28.9444 50H3C1.34314 50 0 48.6568 0 47V25.2222C0 23.5653 1.34315 22.2222 3 22.2222H3.47168V12.2951C3.47168 5.5047 9.06812 0 15.9717 0C22.8752 0 28.4717 5.5047 28.4717 12.2951V22.2222ZM24.305 22.2222V12.2951C24.305 7.76816 20.5741 4.09836 15.9717 4.09836C11.3693 4.09836 7.63835 7.76816 7.63835 12.2951V22.2222H24.305Z"
+                                                          fill="#FF6C00"/>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Cyber<br>Security </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M49.2481 21.7759L46.3519 21.2185C44.6463 20.8907 43.2491 19.7306 42.6157 18.113C41.9806 16.4972 42.2148 14.6963 43.2426 13.2954L45.0611 10.8148C45.3315 10.4472 45.2917 9.93611 44.9685 9.61296L41.0407 5.68518C40.7269 5.3713 40.2343 5.32407 39.8667 5.57315L37.4241 7.22685C36.5815 7.79722 35.6111 8.09907 34.6157 8.09907C32.1037 8.09907 30.0046 6.30185 29.6222 3.82407L29.1546 0.784259C29.087 0.333333 28.6981 0 28.2407 0H22.6852C22.2417 0 21.8593 0.315741 21.7759 0.751852L21.0565 4.49352C20.6009 6.86296 18.5139 8.58241 16.0963 8.58241C15.1009 8.58241 14.1287 8.28148 13.288 7.71111L10.1333 5.57407C9.76574 5.32593 9.27315 5.37222 8.95926 5.68611L5.03056 9.61389C4.70741 9.93704 4.66852 10.4472 4.93796 10.8167L6.75648 13.2972C7.78333 14.6972 8.01759 16.4981 7.38333 18.1148C6.74815 19.7306 5.35185 20.8917 3.6463 21.2194L0.75 21.7768C0.314815 21.8593 0 22.2417 0 22.6852V28.2407C0 28.6972 0.333333 29.0861 0.785185 29.1556L3.825 29.6231C5.54074 29.887 6.98056 30.9944 7.67407 32.5861C8.36852 34.1787 8.20185 35.987 7.22778 37.425L5.57407 39.8676C5.325 40.2343 5.37222 40.7278 5.68611 41.0417L9.61389 44.9694C9.93704 45.2917 10.4463 45.3333 10.8157 45.062L13.2963 43.2435C14.1704 42.6028 15.1944 42.263 16.2565 42.263C18.6759 42.263 20.763 43.9824 21.2185 46.3519L21.7759 49.2491C21.8593 49.6843 22.2417 50 22.6852 50H28.2407C28.6981 50 29.0861 49.6667 29.1556 49.2148L29.4843 47.0768C29.9157 44.2694 32.3241 42.8009 34.4806 42.8009C35.5417 42.8009 36.5639 43.1398 37.4398 43.7824L39.1843 45.0611C39.5537 45.3324 40.0639 45.2907 40.3861 44.9685L44.3139 41.0407C44.6278 40.7269 44.675 40.2343 44.4259 39.8667L42.7722 37.4241C41.7981 35.9861 41.6315 34.1778 42.3259 32.5852C43.0204 30.9935 44.4593 29.8861 46.175 29.6222L49.2148 29.1546C49.6667 29.0861 50 28.6972 50 28.2407V22.6852C50 22.2417 49.6852 21.8593 49.2481 21.7759ZM33.3333 25.463C33.3333 29.8028 29.8028 33.3333 25.463 33.3333C21.1231 33.3333 17.5926 29.8028 17.5926 25.463C17.5926 21.1231 21.1231 17.5926 25.463 17.5926C29.8028 17.5926 33.3333 21.1231 33.3333 25.463Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M25.4698 15C19.7618 15 15 19.6556 15 25.3635C15 31.0715 19.7618 35.8333 25.4698 35.8333C31.1778 35.8333 35.8333 31.0715 35.8333 25.3635C35.8333 19.6556 31.1778 15 25.4698 15Z"
+                                                          fill="#F9F9F9"/>
+                                                    <path d="M26.9476 24.5835H26.2074V21.4585H26.9476C27.3621 21.4585 27.6877 21.8022 27.6877 22.2397C27.6877 23.2709 29.168 23.2709 29.168 22.2397C29.168 20.9428 28.1763 19.896 26.9476 19.896H26.2074V19.1147C26.2074 18.5991 25.8374 18.3335 25.4673 18.3335C25.0972 18.3335 24.7272 18.5991 24.7272 19.1147V19.896H23.8884C22.6596 19.896 21.668 20.9428 21.668 22.2397V23.8022C21.668 25.0992 22.6596 26.146 23.8884 26.146H24.7272V29.3752H23.8884C23.4738 29.3752 23.1482 29.0315 23.1482 28.5939C23.1482 27.5627 21.668 27.5627 21.668 28.5939C21.668 29.8908 22.6596 30.9377 23.8884 30.9377H24.7272V31.7189C24.7272 32.2346 25.0972 32.5002 25.4673 32.5002C25.8374 32.5002 26.2074 32.2346 26.2074 31.7189V30.9377H26.9476C28.1763 30.9377 29.168 29.8908 29.168 28.5939V26.9272C29.168 25.6303 28.1763 24.5835 26.9476 24.5835ZM24.7272 24.5835H23.8884C23.4738 24.5835 23.1482 24.2398 23.1482 23.8022V22.2397C23.1482 21.8022 23.4738 21.4585 23.8884 21.4585H24.7272V24.5835ZM27.6877 28.5939C27.6877 29.0315 27.3621 29.3752 26.9476 29.3752H26.2074V26.146H26.9476C27.3621 26.146 27.6877 26.4897 27.6877 26.9272V28.5939Z"
+                                                          fill="#FF6C00"/>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Fintech </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0)">
+                                                        <path d="M49.2482 21.7759L46.3519 21.2185C44.6463 20.8907 43.2491 19.7306 42.6157 18.113C41.9806 16.4972 42.2148 14.6963 43.2426 13.2954L45.0611 10.8148C45.3315 10.4472 45.2917 9.93611 44.9685 9.61296L41.0407 5.68519C40.7269 5.3713 40.2343 5.32407 39.8667 5.57315L37.4241 7.22685C36.5815 7.79722 35.6111 8.09907 34.6157 8.09907C32.1037 8.09907 30.0046 6.30185 29.6222 3.82407L29.1546 0.784259C29.087 0.333333 28.6982 0 28.2407 0H22.6852C22.2417 0 21.8593 0.315741 21.7759 0.751852L21.0565 4.49352C20.6009 6.86296 18.5139 8.58241 16.0963 8.58241C15.1009 8.58241 14.1287 8.28148 13.288 7.71111L10.1333 5.57407C9.76574 5.32593 9.27315 5.37222 8.95926 5.68611L5.03056 9.61389C4.70741 9.93704 4.66852 10.4472 4.93796 10.8167L6.75648 13.2972C7.78333 14.6972 8.01759 16.4981 7.38333 18.1148C6.74815 19.7306 5.35185 20.8917 3.6463 21.2194L0.75 21.7769C0.314815 21.8593 0 22.2417 0 22.6852V28.2407C0 28.6972 0.333333 29.0861 0.785185 29.1556L3.825 29.6231C5.54074 29.887 6.98056 30.9944 7.67407 32.5861C8.36852 34.1787 8.20185 35.987 7.22778 37.425L5.57407 39.8676C5.325 40.2343 5.37222 40.7278 5.68611 41.0417L9.61389 44.9694C9.93704 45.2917 10.4463 45.3333 10.8157 45.062L13.2963 43.2435C14.1704 42.6028 15.1944 42.263 16.2565 42.263C18.6759 42.263 20.763 43.9824 21.2185 46.3519L21.7759 49.2491C21.8593 49.6843 22.2417 50 22.6852 50H28.2407C28.6982 50 29.0861 49.6667 29.1556 49.2148L29.4843 47.0769C29.9157 44.2694 32.3241 42.8009 34.4806 42.8009C35.5417 42.8009 36.5639 43.1398 37.4398 43.7824L39.1843 45.0611C39.5537 45.3324 40.0639 45.2907 40.3861 44.9685L44.3139 41.0407C44.6278 40.7269 44.675 40.2343 44.4259 39.8667L42.7722 37.4241C41.7981 35.9861 41.6315 34.1778 42.3259 32.5852C43.0204 30.9935 44.4593 29.8861 46.175 29.6222L49.2148 29.1546C49.6667 29.0861 50 28.6972 50 28.2407V22.6852C50 22.2417 49.6852 21.8593 49.2482 21.7759ZM33.3333 25.463C33.3333 29.8028 29.8028 33.3333 25.463 33.3333C21.1231 33.3333 17.5926 29.8028 17.5926 25.463C17.5926 21.1231 21.1231 17.5926 25.463 17.5926C29.8028 17.5926 33.3333 21.1231 33.3333 25.463Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M25.9272 15.7407C20.8212 15.7407 16.668 19.8956 16.668 25C16.668 30.1044 20.8212 34.2592 25.9272 34.2592C31.0333 34.2592 35.1865 30.1044 35.1865 25C35.1865 19.8956 31.0333 15.7407 25.9272 15.7407Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M27.0189 18.3333H22.9785V22.9797H18.332V27.0201H22.9785V31.6666H27.0189V27.0201H31.6654V22.9797H27.0189V18.3333Z"
+                                                              fill="#F9F9F9"/>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0">
+                                                            <rect width="50" height="50" fill="white"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Medical<br>Technology </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="50" height="58" viewBox="0 0 50 58" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5.75135 57C5.0946 57 4.56216 56.4588 4.56216 55.7912V44.989H3.18919C2.53243 44.989 2 44.4478 2 43.7802V36.8791C2 36.2115 2.53243 35.6703 3.18919 35.6703H4.56216V29.6703C4.56216 23.4835 9.58919 23 11.1243 23H38.8649C44.9514 23 45.427 28.1099 45.427 29.6703V35.6593H46.8108C47.4676 35.6593 48 36.2005 48 36.8681V43.8132C48 44.4808 47.4676 45.022 46.8108 45.022H45.427V55.7802C45.433 56.4478 44.9054 56.9938 44.2487 57C44.245 57 44.2414 57 44.2378 57H5.75135ZM33.8595 33.1538C31.7996 33.1538 30.1297 34.8512 30.1297 36.9451C30.1297 39.0389 31.7996 40.7363 33.8595 40.7363C35.9193 40.7363 37.5892 39.0389 37.5892 36.9451C37.6012 34.8578 35.9558 33.151 33.9027 33.1209L33.8595 33.1538ZM16.0541 33.1538C13.9942 33.1538 12.3243 34.8512 12.3243 36.9451C12.3243 39.0389 13.9942 40.7363 16.0541 40.7363C18.1139 40.7363 19.7838 39.0389 19.7838 36.9451C19.7958 34.8537 18.1439 33.1451 16.0865 33.1209L16.0541 33.1538Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M17 32C14.2386 32 12 34.2386 12 37C12 39.7614 14.2386 42 17 42C19.7614 42 22 39.7614 22 37C21.9938 34.2412 19.7588 32.0062 17 32ZM17 39.764C15.4796 39.764 14.2472 38.5316 14.2472 37.0112C14.2472 35.4909 15.4796 34.2584 17 34.2584C18.5204 34.2584 19.7528 35.4909 19.7528 37.0112C19.7404 38.5246 18.5135 39.7468 17 39.7528V39.764Z"
+                                                          fill="#F9F9F9"/>
+                                                    <path d="M34 32C31.2386 32 29 34.2386 29 37C29 39.7614 31.2386 42 34 42C36.7614 42 39 39.7614 39 37C38.9938 34.2412 36.7588 32.0062 34 32ZM34 39.764C32.4796 39.764 31.2472 38.5316 31.2472 37.0112C31.2472 35.4909 32.4796 34.2584 34 34.2584C35.5204 34.2584 36.7528 35.4909 36.7528 37.0112C36.7404 38.5246 35.5135 39.7468 34 39.7528V39.764Z"
+                                                          fill="#F9F9F9"/>
+                                                    <path d="M47.6324 34.925H47.3294V30.1312C47.3294 26.4469 45.2424 22.5149 39.3963 22.5149H26.1221V18.0658C28.4003 17.4709 29.745 15.2154 29.1252 13.0281C28.5055 10.8409 26.1562 9.5499 23.8779 10.145C21.5997 10.74 20.255 12.9954 20.8748 15.1826C21.2727 16.5869 22.4153 17.6839 23.8779 18.0658V22.5149H10.6037C6.76616 22.5149 2.67056 24.5186 2.67056 30.1312V34.925H2.35637C1.05756 34.9309 0.00617145 35.9403 0 37.1873V43.9956C0.00617145 45.2425 1.05756 46.2519 2.35637 46.2578H2.67056V55.7377C2.67673 56.9847 3.72812 57.9941 5.02693 58H44.9731C46.2719 57.9941 47.3233 56.9847 47.3294 55.7377V46.2578H47.6436C48.9424 46.2519 49.9938 45.2425 50 43.9956V37.198C50 35.9427 48.9399 34.925 47.6324 34.925ZM22.9466 14.1338C22.9466 13.0569 23.856 12.1839 24.9777 12.1841C26.0994 12.1841 27.0087 13.0572 27.0085 14.1341C27.0085 15.2024 26.1128 16.0719 25 16.0836C23.8783 16.0836 22.969 15.2107 22.969 14.1338H22.9466ZM47.7558 43.9956C47.7558 44.0551 47.7056 44.1033 47.6436 44.1033H46.2074C45.5877 44.1033 45.0853 44.5856 45.0853 45.1806V55.7377C45.0853 55.7973 45.0351 55.8455 44.9731 55.8455H5.02693C4.96493 55.8455 4.91472 55.7973 4.91472 55.7377V45.1806C4.91472 44.5856 4.41231 44.1033 3.79264 44.1033H2.36759C2.3056 44.1033 2.25539 44.0551 2.25539 43.9956V37.198C2.25539 37.1385 2.3056 37.0903 2.36759 37.0903H3.79264C4.41231 37.0903 4.91472 36.608 4.91472 36.013V30.1312C4.91472 25.1973 8.89811 24.6694 10.6037 24.6694H39.3963C44.5355 24.6694 45.0853 28.4937 45.0853 30.1312V36.0023C45.0853 36.5972 45.5877 37.0795 46.2074 37.0795H47.6436C47.7056 37.0795 47.7558 37.1277 47.7558 37.1873V43.9956Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M25 42C24.4477 42 24 42.4815 24 43.0753V47.9247C24 48.5185 24.4477 49 25 49C25.5523 49 26 48.5185 26 47.9247V43.0753C26 42.4815 25.5523 42 25 42Z"
+                                                          fill="#F9F9F9"/>
+                                                    <path d="M19.2135 3.71542C22.3231 0.603636 27.3665 0.601826 30.4783 3.71136C30.4797 3.71274 30.481 3.71404 30.4824 3.71542C30.7528 3.98395 31.1897 3.9824 31.4582 3.71197C31.7267 3.44154 31.7252 3.00465 31.4548 2.73612C27.8057 -0.912038 21.8902 -0.912038 18.2411 2.73612C17.9518 2.98387 17.9181 3.41921 18.1658 3.70852C18.4136 3.99783 18.8489 4.03153 19.1382 3.78378C19.1652 3.76067 19.1904 3.7355 19.2135 3.70852V3.71542Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M28.9854 5.936C29.3662 5.93824 29.6768 5.63126 29.679 5.2504C29.68 5.06515 29.6066 4.88722 29.475 4.7567C26.9374 2.22889 22.8334 2.22889 20.2958 4.7567C20.0065 5.00446 19.9728 5.4398 20.2205 5.72911C20.4683 6.01841 20.9036 6.05212 21.1929 5.80436C21.2199 5.78126 21.2451 5.75609 21.2682 5.72911C23.2663 3.73232 26.5045 3.73232 28.5026 5.72911C28.6299 5.8591 28.8034 5.93341 28.9854 5.936Z"
+                                                          fill="#FF6C00"/>
+                                                    <path d="M22.2606 6.7635C21.9713 7.01126 21.9376 7.4466 22.1854 7.73591C22.4331 8.02521 22.8685 8.05892 23.1578 7.81116C23.1848 7.78806 23.2099 7.76289 23.233 7.73591C24.126 6.84867 25.5677 6.84867 26.4606 7.73591C26.7083 8.02521 27.1437 8.05892 27.433 7.81116C27.7223 7.56341 27.756 7.12807 27.5083 6.83876C27.4852 6.81178 27.46 6.7866 27.433 6.7635C26.0021 5.34153 23.6916 5.34153 22.2606 6.7635Z"
+                                                          fill="#FF6C00"/>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Robotics </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="p-2">
+                        <div class="fund-sector-items">
+                            <div class="row text-center">
+                                <div class="col-sm-12 sector">
+                                    <div class="fund-sector-item">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0)">
+                                                        <path d="M25.8945 49.9702C29.718 49.427 33.0699 45.4364 35.1791 39.5429C32.13 38.8601 29.0186 38.4936 25.8945 38.45V49.9702Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M32.0015 49.0333C32.2275 48.9679 32.4527 48.902 32.6761 48.8295C32.8646 48.7689 33.0504 48.7035 33.2363 48.6384C33.4562 48.5625 33.6753 48.4844 33.8934 48.4015C34.0793 48.3308 34.2634 48.2558 34.448 48.1807C34.6609 48.0913 34.8734 48.0023 35.0837 47.9128C35.2674 47.8321 35.4498 47.7475 35.6322 47.6624C35.8385 47.5651 36.0441 47.466 36.2478 47.3631C36.4267 47.2719 36.6052 47.1789 36.7841 47.0834C36.9843 46.976 37.1833 46.8665 37.3809 46.754C37.5598 46.6527 37.7322 46.5511 37.9063 46.4464C38.1 46.3272 38.2929 46.2081 38.4844 46.089C38.6559 45.9799 38.8269 45.8691 38.9958 45.7548C39.1843 45.6278 39.3701 45.4956 39.5551 45.3634C39.7214 45.2443 39.8868 45.1256 40.0491 45.006C40.228 44.8682 40.4112 44.7255 40.5905 44.5824C40.7498 44.4554 40.9086 44.3293 41.0653 44.1988C41.2437 44.0505 41.4148 43.8969 41.588 43.7433C41.7398 43.6085 41.8925 43.475 42.0409 43.3367C42.2115 43.1774 42.3777 43.0125 42.544 42.8489C42.6879 42.7066 42.8337 42.5666 42.9746 42.4208C43.0008 42.3938 43.0257 42.3645 43.0527 42.3366C41.1037 41.33 39.0508 40.5398 36.9298 39.9805C35.8268 43.4981 33.8637 46.6859 31.2188 49.2541C31.2912 49.2353 31.3636 49.2201 31.436 49.2013C31.6271 49.1476 31.8148 49.0887 32.0015 49.0333Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M49.999 25.9141H39.2847C39.2441 30.0975 38.6372 34.2561 37.4805 38.2769C39.8392 38.9069 42.1155 39.8127 44.2622 40.9755C47.7869 36.7275 49.8044 31.4309 49.999 25.9141Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M25.8945 24.1268H37.4995C37.4541 20.0913 36.862 16.0806 35.7402 12.2039C32.5088 12.9408 29.2084 13.3344 25.8945 13.378V24.1268Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M25.8945 0.0705566V11.5908C29.0186 11.5467 32.13 11.1807 35.1791 10.4978C33.0699 4.6044 29.718 0.61378 25.8945 0.0705566Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M25.8945 36.6629C29.2084 36.707 32.5088 37.1005 35.7402 37.8375C36.862 33.9608 37.4541 29.9496 37.4995 25.9141H25.8945V36.6629Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M44.2622 9.06543C42.1155 10.2282 39.8392 11.134 37.4805 11.7641C38.6372 15.7848 39.2441 19.9434 39.2847 24.1269H49.999C49.804 18.6105 47.7864 13.3139 44.2622 9.06543Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M43.0558 7.70973C43.0296 7.68312 43.0048 7.65432 42.979 7.62683C42.8377 7.4811 42.691 7.3406 42.5471 7.1988C42.3813 7.03517 42.2159 6.86981 42.0449 6.71099C41.8969 6.57311 41.7438 6.44265 41.5919 6.3052C41.4187 6.15162 41.2455 5.99672 41.0675 5.84837C40.913 5.71791 40.7546 5.59312 40.5976 5.4679C40.4187 5.32304 40.2354 5.17905 40.0513 5.04074C39.8898 4.919 39.7262 4.8012 39.5617 4.68339C39.375 4.549 39.1874 4.41505 38.9971 4.28721C38.83 4.17463 38.6603 4.06468 38.4906 3.95691C38.2973 3.83256 38.1044 3.71082 37.9076 3.59301C37.7353 3.48961 37.5612 3.38751 37.3867 3.28846C37.1868 3.17414 36.9865 3.06332 36.7845 2.95511C36.6056 2.86566 36.4272 2.76836 36.2483 2.67892C36.0428 2.57507 35.8355 2.47515 35.623 2.37698C35.4441 2.2919 35.2626 2.209 35.0785 2.12828C34.8669 2.03447 34.6531 1.94982 34.4397 1.86037C34.2556 1.78533 34.0723 1.71115 33.8865 1.64047C33.6696 1.55756 33.4497 1.4799 33.2298 1.40398C33.0439 1.33853 32.858 1.27352 32.6695 1.21243C32.4462 1.14 32.2228 1.07412 31.9932 1.0078C31.8074 0.953256 31.6206 0.897842 31.4326 0.848101C31.3606 0.828467 31.2873 0.813196 31.2148 0.794434C33.8598 3.36264 35.8224 6.54998 36.9259 10.0681C39.049 9.50869 41.105 8.71808 43.0558 7.70973Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M0 24.1269H10.7144C10.7549 19.9434 11.3619 15.7848 12.5181 11.7641C10.1598 11.1345 7.8835 10.2287 5.73679 9.06543C2.21216 13.3135 0.1946 18.6105 0 24.1269Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M24.1048 49.9702V38.45C20.9808 38.494 17.8693 38.8601 14.8203 39.5429C16.9291 45.4364 20.2813 49.427 24.1048 49.9702Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M24.1049 25.9141H12.5C12.5454 29.9496 13.137 33.9608 14.2593 37.8375C17.4907 37.1001 20.7906 36.7065 24.1049 36.6629V25.9141Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M24.1048 0.0705566C20.2813 0.61378 16.9291 4.6044 14.8203 10.4978C17.8693 11.1811 20.9808 11.5472 24.1048 11.5908V0.0705566Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M24.1049 13.378C20.791 13.3344 17.4907 12.9408 14.2593 12.2039C13.137 16.0806 12.5454 20.0913 12.5 24.1268H24.1049V13.378Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M18.7767 0.793701C18.7042 0.812463 18.6318 0.827735 18.5594 0.846496C18.37 0.89711 18.1833 0.953396 17.9948 1.00794C17.7705 1.07338 17.548 1.13927 17.3228 1.21083C17.133 1.27235 16.9463 1.3378 16.7596 1.40281C16.541 1.48004 16.3219 1.55683 16.1055 1.63886C15.9188 1.71042 15.7346 1.78459 15.5496 1.86051C15.3371 1.94996 15.1242 2.03941 14.9143 2.12842C14.7302 2.20914 14.5483 2.29378 14.3659 2.37887C14.1595 2.47617 13.954 2.57521 13.7502 2.67818C13.5713 2.76938 13.3924 2.86275 13.214 2.95787C13.0137 3.0652 12.8152 3.17516 12.618 3.28773C12.4391 3.38765 12.2632 3.49018 12.0909 3.5949C11.8967 3.71183 11.7047 3.8327 11.5136 3.95225C11.3417 4.0622 11.1711 4.17303 11.0023 4.28735C10.8138 4.41432 10.6279 4.54652 10.4429 4.67873C10.2766 4.79784 10.1113 4.91652 9.94853 5.03651C9.76571 5.17396 9.59118 5.31707 9.40705 5.45975C9.24823 5.58672 9.0881 5.71282 8.93277 5.84415C8.75388 5.99163 8.58415 6.14434 8.4118 6.29705C8.25908 6.43319 8.10506 6.56539 7.95584 6.70632C7.78611 6.86471 7.62074 7.0292 7.45494 7.19239C7.31095 7.33463 7.16435 7.47513 7.02298 7.6213C6.99724 7.64835 6.97236 7.67802 6.94531 7.70551C8.89394 8.71254 10.9473 9.50272 13.0682 10.0621C14.1713 6.54619 16.133 3.36059 18.7767 0.793701Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M7.45055 42.8421C7.61679 43.0057 7.78216 43.1711 7.95276 43.3304C8.10111 43.4678 8.25383 43.5983 8.4061 43.7357C8.57932 43.8897 8.75255 44.0442 8.93057 44.1926C9.08502 44.3221 9.24254 44.4474 9.40049 44.573C9.57938 44.7179 9.75784 44.8619 9.9472 45.0011C10.1082 45.1219 10.2718 45.2389 10.4354 45.3588C10.6222 45.4928 10.8107 45.6267 11.0009 45.7555C11.168 45.868 11.3378 45.978 11.5075 46.0862C11.7008 46.2101 11.8936 46.3318 12.0904 46.4497C12.2628 46.5535 12.4369 46.6552 12.6114 46.7546C12.8112 46.869 13.0115 46.9798 13.2135 47.0876C13.392 47.177 13.5709 47.2743 13.7498 47.3638C13.9553 47.4676 14.1625 47.5675 14.375 47.6661C14.5539 47.7503 14.7354 47.8332 14.9195 47.9144C15.1312 48.0082 15.3445 48.0928 15.5583 48.1823C15.7425 48.2573 15.9257 48.3315 16.1116 48.4022C16.3284 48.4855 16.5483 48.5632 16.7683 48.6391C16.9541 48.7041 17.14 48.7696 17.3285 48.8302C17.5519 48.9027 17.7753 48.969 18.0048 49.0349C18.1907 49.0894 18.3774 49.1448 18.565 49.195C18.6375 49.2146 18.7108 49.2299 18.7832 49.2487C16.1382 46.68 14.1756 43.4927 13.0722 39.9746C10.9512 40.5344 8.89784 41.3246 6.94922 42.3321C6.9754 42.3587 7.00027 42.3875 7.02645 42.415C7.1604 42.5598 7.30482 42.7003 7.45055 42.8421Z"
+                                                              fill="#FF6C00"/>
+                                                        <path d="M5.73679 40.9755C7.8835 39.8127 10.1598 38.9069 12.5181 38.2769C11.3619 34.2561 10.7549 30.0975 10.7144 25.9141H0C0.195037 31.4305 2.21216 36.727 5.73679 40.9755Z"
+                                                              fill="#FF6C00"/>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0">
+                                                            <rect width="50" height="50" fill="white"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <p> Internet<br>of Things </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="right-img-block eis-fund">
+            <div class="container right-img-block__wrapper">
+                <div class="right-img-block__left-content">
+                    <span class="title__orange">Innvotec Funds</span>
+                    <h2 class="title__big right-img-block__big-title">AIMS & FOCUS</h2>
+                    <p class="right-img-block__text">
+                        The focus of all Innvotec-managed Funds, tax-efficient or otherwise, is to create a portfolio of
+                        high-value investments that Innvotec can continue to invest in from seed to series B.
+                    </p>
+                    <p class="right-img-block__text">
+                        Innvotec aims to create well-balanced portfolios, in terms of the targeted time to exit, to
+                        ensure that Investors receive a flow of returns typically starting after year three.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-invest-invest">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center section-header">Why Invest?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-4 invest eis-fund-list-item">
+                        <span>Simple & Transparent</span>
+                        <p>
+                            In the world of Venture Capital and Private Equity, Innvotec-managed Funds have proven to be
+                            highly innovative whilst combining both simplicity in approach and transparency in
+                            performance.
+                        </p>
+                    </div>
+                    <div class="col-md-12 col-lg-4 invest eis-fund-list-item">
+                        <span>Good Opportunities</span>
+                        <p>
+                            Innvotec identifies good opportunities and builds businesses with entrepreneurs around
+                            proprietary technology that is ‘cutting edge’ and which addresses demand from markets that
+                            are truly global. The Funds provide both institutions and private investors with the
+                            opportunity to invest in such businesses.
+                        </p>
+                    </div>
+                    <div class="col-md-12 col-lg-4 invest eis-fund-list-item">
+                        <span>High-value Companies Building</span>
+                        <p>
+                            The Fund’s objective is to build high-value companies capable of returning to Investors a
+                            significant multiple on the cost of each investment made and within a reasonable timeframe.
+                        </p>
+                        <p>
+                            The overall performance of the recent tax-efficient funds compares favourably against their
+                            peer group of Funds as well as the FTSE 100.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ies-fund-comp-adv-section">
+            <div class="comp-adv-text w-100">
+                <div class="container">
+                  <span>
+                  Innvotec-managed Funds take a distinctly different approach to investment and value appreciation,
+                  compared to most typical UK based capital growth Funds, be they funded by institutions or private
+                  investors taking advantage of tax reliefs.
+                  </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key point -->
+        <section class="key-points-key">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="text-center section-header">Key Points</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 key eis-fund-list-item">
+                        <span>Fast</span>
+                        <p>
+                            The target companies receiving investment from the Funds have already been identified, which
+                            means there is less elapsed time between commitment and investment. </p>
+                        <span>Selective</span>
+                        <p>
+                            Innvotec applies rigorous criteria when selecting technologies in which to seek investment
+                            opportunities. Its experience in actively managing and building companies has proven to be a
+                            successful formula for both minimising risk and maximising potential returns. </p>
+
+                    </div>
+                    <div class="col-md-6 col-sm-12 key eis-fund-list-item">
+                        <span>Appreciating</span>
+                        <p>
+                            The fee charging and structure of all Funds puts Investors and their interests first.
+                        </p>
+                        <span>Equitable</span>
+                        <p>
+                            A performance hurdle only rewards the Fund Manager for delivering real and meaningful
+                            returns as opposed to rewarding mediocrity. The Performance Fee cannot be drawn until
+                            Investors have received back 140% of their Commitment, before taking into account any tax
+                            reliefs in the case of our tax efficient Funds. Performance fees are based on the Fund’s
+                            performance and not on a company by company basis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- .content -->
+
+</div>
+<!-- .wrapper -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <svg width="68" height="17" viewBox="0 0 68 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M57.2063 7.56861L51.3033 7.50199C52.0095 4.71706 55.8338 4.02416 57.2063 7.56861ZM49.2513 15.9234L49.8642 16.03V13.858C48.2519 13.8847 46.3597 11.9392 46.373 10.4868L46.413 5.13013L49.7843 5.17011C49.1047 6.43598 48.5717 7.32876 48.8382 9.67396C49.3445 11.8859 51.2767 13.8447 53.7951 13.8713V12.1791C53.0755 11.9525 52.4359 11.7393 52.1028 11.2996C51.6231 10.74 51.3566 10.2736 51.2367 9.32751L57.4595 9.44744C57.5261 10.1803 57.8459 10.8332 58.1923 11.3929C58.8453 12.1391 59.2184 12.6854 60.0712 13.1918C60.5775 13.4849 61.0172 13.6448 61.5902 13.7781C63.3891 14.2045 67.0002 12.9919 67.6664 11.4195L66.2007 10.6067C66.1607 10.5801 65.8276 10.4202 65.6677 10.3535C63.629 12.6588 59.6847 11.8593 59.738 8.47471C59.7913 5.22341 64.1486 4.06413 65.6544 6.75578L67.4399 5.66313C66.5738 4.69041 65.9608 3.74433 64.655 3.38456C63.3624 3.0381 61.6302 3.06475 60.4576 3.70436C58.9652 4.53051 59.285 4.65043 58.4722 5.17011C57.8192 4.41058 56.7666 3.53113 55.7405 3.37123C54.2215 2.94483 48.585 3.17135 46.5196 3.1447V0H44.3077C44.3077 3.26463 44.1078 7.15554 44.321 10.3402C44.8407 14.2045 47.1992 14.7375 49.2246 15.8834L49.2513 15.9234Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.9597 9.42091C40.7065 10.3403 40.4134 10.82 39.6405 11.353C38.7478 11.9793 36.9889 12.006 36.1361 11.4863C34.7636 10.6468 34.084 9.19438 34.5504 7.63536C35.7629 3.5579 42.1323 5.18355 40.9597 9.40758V9.42091ZM32.0586 8.50148C32.0586 9.54083 32.4184 10.7001 32.9247 11.473C32.938 11.4996 32.9647 11.5396 32.9913 11.5662L33.1912 11.8194C33.2045 11.8461 33.2445 11.8727 33.2578 11.8994L33.6709 12.3791C35.5631 14.2446 38.8277 14.4311 40.973 13.1386C41.6659 12.7255 42.572 11.7128 42.9318 10.9933C45.2637 6.2229 40.0536 1.70572 35.5897 3.6112C34.1639 4.22415 32.9514 5.29015 32.4184 6.76923C32.2585 7.19563 32.0719 7.87521 32.0852 8.51481L32.0586 8.50148Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.08754 7.87516L3.10087 13.8314L5.33947 13.8581L5.36612 8.95449C5.36612 7.07566 5.63262 6.12959 6.9518 5.58326C8.29763 5.02361 9.65678 5.62324 10.2431 6.94241C10.3897 7.27554 10.4829 7.99509 10.4963 8.86122L10.5895 13.8448L12.6949 13.8314L12.7215 7.87516C12.7215 6.19621 11.962 4.74379 10.7361 3.94428L10.363 3.71776C9.1371 3.01153 7.31158 2.87828 6.05902 3.46458C4.15355 4.34403 3.07422 5.68986 3.07422 7.87516H3.08754Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.1562 13.8979H27.0744C27.0744 13.8179 26.8346 13.9645 27.301 13.2183L33.4838 3.1979H30.912L26.4082 10.2602L26.3815 3.21122L24.2096 3.18457L24.1562 13.9112V13.8979Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.14299V13.8315H2.25193L2.30523 5.43677L0 6.14299Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.43676L2.22528 4.73053L2.30523 3.13153L0 3.09155V5.43676Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6461 7.87516L13.6595 13.8314L15.8981 13.8581L15.9247 8.95449C15.9247 7.07566 16.1912 6.12959 17.5104 5.58326C18.8562 5.02361 20.2154 5.62324 20.8017 6.94241C20.9482 7.27554 21.0415 7.99509 21.0548 8.86122L21.1481 13.8448L23.2535 13.8314L23.2801 7.87516C23.2801 6.19621 22.5206 4.74379 21.2947 3.94428L20.9216 3.71776C19.6957 3.01153 17.8702 2.87828 16.6176 3.46458C14.7121 4.34403 13.6328 5.68986 13.6328 7.87516H13.6461Z" fill="black"/>
+                </svg>
+
+            </div>
+        </div>
+        <div class="row footer-info-block">
+            <div class="col-md-12">
+                <p class="footer-info">Innvotec Limited is authorised and regulated by the Financial Conduct Authority (FCA) –
+                    FRN
+                    122365</p>
+                <p class="footer-info">Innvotec Limited is a registered company in England & Wales. Registration Number:
+                    02030086.<br>
+                    Registered Office: Painters Hall, 9 Little Trinity Lane, London, EC4V 2AD.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <span class="copyright">&copy; Copyright 2019, Innvotec Limited. All rights reserved.</span>
+                    </li>
+                    <li class="list-inline-item"><a href="terms.html" class="rule">Terms of use</a></li>
+                    <li class="list-inline-item"><a href="policy.html" class="rule">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="access-statement.html" class="rule">Access Statement</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- .footer -->
+
+<!-- Modal -->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body">
+                <div class="modal-content__header">
+                    <h4>Terms & Conditions</h4>
+                    <p>
+                        Please read this important information before confirming that you understand the information
+                        contained by clicking on the
+                        acceptance button at the foot of this window, which will then allow you to access our website
+                        and the information contained therein.
+                    </p>
+                </div>
+                <div class="modal-content__text">
+                    <p>
+                        Certain parts of the information contained in this website (the 'Website') constitute a
+                        financial promotion pursuant to section
+                        21 of the Financial Services and Markets Act 2000 ('FSMA') and is issued by Innvotec (the
+                        'Manager') which is authorised and
+                        regulated by the Financial Conduct Authority in the United Kingdom and whose registered office
+                        is at Painters Hall, 9 Little Lane,
+                        London, EC4V 2AD.
+                    </p>
+
+                    <p>The Website is not directed at, and should not be accessed by, persons in any jurisdiction other
+                        than the United Kingdom.</p>
+
+                    <p>
+                        If you are in any doubt about the action you should take in regard to the contents of the
+                        Website, you should contact an independent
+                        financial adviser or other professional adviser authorised under FSMA who specialises in
+                        advising on investments of the type referred
+                        to in the Website. Reliance on the information in the Website for the purpose of engaging in any
+                        investment activity may expose an individual
+                        to a significant risk of losing all of the property or other assets invested. Nothing in the
+                        Website constitutes investment, tax, financial,
+                        regulatory or other advice by the Manager.
+                    </p>
+
+                    <p>
+                        The Website contains general information regarding EIS Funds, Seed EIS Funds and SITR Funds
+                        (together the 'Funds'). The contents of the Website is
+                        provided for information purposes only and does not, nor is it intended to, constitute an offer
+                        or solicitation to any person in any jurisdiction
+                        to purchase or sell any investment. The information available on the Website is subject at all
+                        times to the full terms of the Information Memoranda
+                        relating to the Funds (the 'Information Memoranda'), which should be read in their entirety
+                        before a decision to invest in the Fund is made.
+                        In particular, your attention is drawn to the risk factors relating to an investment in the
+                        Funds.
+                    </p>
+
+                    <ul>
+                        <li>You have read and understood the regulatory information set out above;</li>
+
+                        <li>
+                            You are not aware of any limitation or restriction prohibiting you from accessing the
+                            information contained in the Website;
+                        </li>
+
+                        <li>To be bound by the terms and conditions set out above;</li>
+
+                        <li>
+                            If you are unable to agree to the terms outlined above, or you are resident in any
+                            jurisdiction
+                            where access to the Website and the information contained within it is not permitted, then
+                            please exit the Website immediately.
+                        </li>
+                    </ul>
+
+                    <h5>Innvotec Limited does not accept any responsibility for any unauthorised access to the
+                        Website.</h5>
+
+                    <h5>
+                        I certify that I am not a US person. Innvotec Limited is not registered as an investment advisor
+                        with the SEC and therefore this website is
+                        neither directed at nor intended for US investors.
+                    </h5>
+                </div>
+                <div class="modal-content__accept">
+                    <form class="modal-content__form" action="">
+                        <label class="modal-content__checkbox" data-dismiss="modal" aria-label="Close">Yes, I accept
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                        </label>
+                    </form>
+                </div>
+                <div class="modal-content__policy">
+                    <h5>Cookie Warning</h5>
+                    <p>Innvotec Limited does use cookies on its website.</p>
+                    <p>Your personal data is not currently collected by Innvotec Limited using cookies. Further details
+                        are available in our
+                        <a href="policy.html">cookie policy</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/termsModal.js"></script>
+</body>
+</html>

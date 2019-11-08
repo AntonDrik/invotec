@@ -1,0 +1,240 @@
+/* Eric Meyer's CSS Reset */
+@font-face {
+    font-family: "SF Pro Display";
+    src: url(font/SFProDisplay.woff);
+}
+
+@font-face {
+    font-family: 'SF Pro Display medium';
+    src: url('font/SFProDisplay-Medium.eot');
+    src: local('font/SF Pro Display Medium'), local('SFProDisplay-Medium'),
+    url('font/SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+    url('font/SFProDisplay-Medium.woff2') format('woff2'),
+    url('font/SFProDisplay-Medium.woff') format('woff'),
+    url('font/SFProDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display bold';
+    src: url('font/SFProDisplay-Bold.eot');
+    src: local('font/SF Pro Display Bold'), local('SFProDisplay-Bold'),
+    url('font/SFProDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+    url('font/SFProDisplay-Bold.woff2') format('woff2'),
+    url('font/SFProDisplay-Bold.woff') format('woff'),
+    url('font/SFProDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Display heavy';
+    src: url('font/SFProDisplay-Heavy.eot');
+    src: local('font/SF Pro Display Heavy'), local('SFProDisplay-Heavy'),
+    url('font/SFProDisplay-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('font/SFProDisplay-Heavy.woff2') format('woff2'),
+    url('font/SFProDisplay-Heavy.woff') format('woff'),
+    url('font/SFProDisplay-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('font/SFUIText-Regular.eot');
+    src: local('SF UI Text Regular'), local('SFUIText-Regular'),
+    url('font/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
+    url('font/SFUIText-Regular.woff') format('woff'),
+    url('font/SFUIText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('font/SFUIText-Medium.eot');
+    src: local('SF UI Text Medium'), local('SFUIText-Medium'),
+    url('font/SFUIText-Medium.eot?#iefix') format('embedded-opentype'),
+    url('font/SFUIText-Medium.woff') format('woff'),
+    url('font/SFUIText-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+* {
+    font-family: "SF Pro Display";
+    color: #444444;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, h2 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+@-o-viewport {
+    width: device-width;
+}
+@viewport {
+    width: device-width;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End of Eric Meyer's CSS Reset */
+
+html {
+    height: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+
+body {
+    font-family: SF Pro Display;
+    height: 100%;
+}
+
+/* buttons */
+
+.btn {
+    border-radius: 30px !important;
+    font-size: 21px;
+    width: 210px;
+    min-height: 40px;
+}
+
+.btn__orange {
+    background-color: #FF6C00;
+    color: #ffffff;
+}
+
+.btn__orange:hover {
+    background-color: #ff600f;
+}
+
+.btn__white {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid black !important;
+    font-weight: 600 !important;
+    outline: none;
+}
+
+.btn__white:hover {
+    background-color: #FF6C00;
+    border: 2px solid white !important;
+    color: #ffffff;
+}
+
+.btn__white:focus {
+    box-shadow: none !important;
+}
+
+/* Titles */
+
+.title__orange {
+    font-size: 15px;
+    line-height: 29px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #FF6C00;
+    padding-bottom: 30px;
+    font-family: "SF Pro Display bold";
+}
+
+.title__orange-italic {
+    color: #FF6C00;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+.title__big {
+    font-size: 36px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 900;
+}
+
+/* Wrapper */
+
+.wrapper {
+	min-width: 320px;
+	max-width: 1600px;
+	margin: 0 auto;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+.header {
+
+}
+
+/* Middle
+-----------------------------------------------------------------------------*/
+.content {
+    padding: 0 0 243px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+.footer {
+    margin: -200px auto 0;
+    min-width: 320px;
+    max-width: 1600px;
+    background: #F2F2F2;
+    position: relative;
+    padding: 20px 0;
+}
+
