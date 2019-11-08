@@ -126,55 +126,60 @@
                     </div>
                 </div>
                 <div class="portfolio-cards">
-                    <div class="card portfolio-card">
-                        <img src="images/comapany-8.png" alt="">
-                        <div class="card-info portfolio-card__info">
-                            <a class="card-info__name">Solus scientific Exit in process (2019)</a>
-                            <ul class="card-info__ul">
-                                <li>Healthcare sector.</li>
-                                <li>Investment holding period 7 years.</li>
-                                <li>10x Tax-free Return to EIS investors expected.</li>
-                                <li>Milestone-based cash transaction.</li>
-                            </ul>
+                    <div class="portfolio-recent">
+                        <div class="card portfolio-card">
+                            <img src="images/comapany-8.png" alt="">
+                            <div class="card-info portfolio-card__info">
+                                <a class="card-info__name">Solus scientific Exit in process (2019)</a>
+                                <ul class="card-info__ul">
+                                    <li>Healthcare sector.</li>
+                                    <li>Investment holding period 7 years.</li>
+                                    <li>10x Tax-free Return to EIS investors expected.</li>
+                                    <li>Milestone-based cash transaction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card portfolio-card">
+                            <img src="images/comapny-7.png" alt="">
+                            <div class="card-info portfolio-card__info">
+                                <a class="card-info__name">Scout 7 to Perform Group (October 2017)</a>
+                                <ul class="card-info__ul">
+                                    <li>SportsTech- major (player) database supplier to football clubs worldwide.</li>
+                                    <li>Investment holding period 10 years.</li>
+                                    <li>3.75x return.</li>
+                                    <li>Cash transaction.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card portfolio-card">
+                            <img src="images/company-6.png" alt="">
+                            <div class="card-info portfolio-card__info">
+                                <a class="card-info__name">My Gravity to Bink (February 2017)</a>
+                                <ul class="card-info__ul">
+                                    <li>Digital App Technology helping to build and retain customer relationships.</li>
+                                    <li>Investment holding period<br> < 12 months.</li>
+                                    <li>10x net cost of investment to SEIS investors (*based on current value of
+                                        acquirer).
+                                    </li>
+                                    <li>Paper transaction plus cash to compensate for the loss of SEIS relief.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card portfolio-card">
+                            <img src="images/company-2.png" alt="">
+                            <div class="card-info portfolio-card__info">
+                                <a class="card-info__name">Phagenesis to Nestle (September 2016)</a>
+                                <ul class="card-info__ul">
+                                    <li>Healthcare sector- treatment for dysphagia.</li>
+                                    <li>Investment holding period 7 years.</li>
+                                    <li>8.2x Tax-free Return to EIS investors.</li>
+                                    <li>Milestone-based cash transaction.</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="card portfolio-card">
-                        <img src="images/comapny-7.png" alt="">
-                        <div class="card-info portfolio-card__info">
-                            <a class="card-info__name">Scout 7 to Perform Group (October 2017)</a>
-                            <ul class="card-info__ul">
-                                <li>SportsTech- major (player) database supplier to football clubs worldwide.</li>
-                                <li>Investment holding period 10 years.</li>
-                                <li>3.75x return.</li>
-                                <li>Cash transaction.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card portfolio-card">
-                        <img src="images/company-6.png" alt="">
-                        <div class="card-info portfolio-card__info">
-                            <a class="card-info__name">My Gravity to Bink (February 2017)</a>
-                            <ul class="card-info__ul">
-                                <li>Digital App Technology helping to build and retain customer relationships.</li>
-                                <li>Investment holding period<br> < 12 months.</li>
-                                <li>10x net cost of investment to SEIS investors (*based on current value of
-                                    acquirer).
-                                </li>
-                                <li>Paper transaction plus cash to compensate for the loss of SEIS relief.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card portfolio-card">
-                        <img src="images/company-2.png" alt="">
-                        <div class="card-info portfolio-card__info">
-                            <a class="card-info__name">Phagenesis to Nestle (September 2016)</a>
-                            <ul class="card-info__ul">
-                                <li>Healthcare sector- treatment for dysphagia.</li>
-                                <li>Investment holding period 7 years.</li>
-                                <li>8.2x Tax-free Return to EIS investors.</li>
-                                <li>Milestone-based cash transaction.</li>
-                            </ul>
-                        </div>
+                    <div class="portfolio-top">
+
                     </div>
                 </div>
                 <a class="advantages-header portfolio-link" href="">Show more</a>
@@ -224,6 +229,14 @@
                     <li class="list-inline-item"><a href="access-statement.html" class="rule">Access Statement</a></li>
                 </ul>
             </div>
+        </div>
+    </div>
+    <div class="card portfolio-card top-card" style="display: none">
+        <img src="images/company-2.png" alt="">
+        <div class="card-info portfolio-card__info">
+            <a class="card-info__name"></a>
+            <span class="portfolio-card__fund"></span>
+            <p class="card-info__text"></p>
         </div>
     </div>
 </footer>
@@ -330,17 +343,6 @@
         </div>
     </div>
 </div>
-
-<template id="card">
-    <div class="card portfolio-card">
-        <img src="images/company-2.png" alt="">
-        <div class="card-info portfolio-card__info">
-            <a class="card-info__name"></a>
-            <span class="portfolio-card__fund"></span>
-            <p class="card-info__text"></p>
-        </div>
-    </div>
-</template>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

@@ -123,7 +123,7 @@ var data = [{
     img: './images/companies/c-19.png',
     text: 'Voltrics is developing a range of innovative and dynamic connections. The first product is Slip-Sphere, which is is a dynamic ' + 'electro-mechanical wiring harness joint that eliminates the need for cable flex in wiring harness assemblies. The construction ' + 'removes stress and works hardening of a cable and its associated components improving the lifespan and effectiveness of each part, ' + 'making the system as a whole more reliable all the while ensuring repairs can be made locally to the damaged area and not affect the ' + 'entire assembly. The simple and considered design allows it to be scaled to suit its intended use-case and similarly can carry a varying ' + 'number of channels as the product architecture requires. Slip-Sphere can be commissioned into a wide range of applications offering a dynamic ' + 'solution for challenging wiring applications. '
 }];
-var portfolioBox = $('.portfolio-cards');
+var portfolioTop = $('.portfolio-top');
 var switcher = $('.controls__switcher');
 
 var Portfolio =
@@ -139,18 +139,19 @@ var Portfolio =
         _createClass(Portfolio, [{
             key: "createCard",
             value: function createCard(data) {
-                var card = document.querySelector('#card').content.cloneNode(true);
+                var card = document.querySelector('.top-card').cloneNode(true);
                 card.querySelector('a').innerText = data.link;
                 card.querySelector('a').href = data.href;
                 card.querySelector('span').innerText = "(".concat(data.fund, " Fund)");
                 card.querySelector('p').innerHTML = data.text;
-                card.querySelector('img').src = data.img; // data.advantagesList.forEach( item => {
+                card.querySelector('img').src = data.img;
+                card.style.display = 'flex'; // data.advantagesList.forEach( item => {
                 //     const li = document.createElement('li');
                 //     li.innerHTML = item;
                 //     card.querySelector('ul').appendChild(li);
                 // });
 
-                portfolioBox.append(card);
+                portfolioTop.append(card);
             }
         }, {
             key: "showMore",
@@ -171,24 +172,26 @@ var Portfolio =
         }, {
             key: "switch",
             value: function _switch() {
-                portfolioBox.empty();
+                portfolioTop.empty();
                 var translate = switcher.css('transform').match(/matrix\(\d+, ?\d+, ?\d+, ?\d+, ?(\d+)/)[1];
                 translate = parseInt(translate);
                 switcher.css('transform', "translateX(".concat(translate === 0 ? 95.5 : 0, "%)"));
 
-                for (var i = 0; i < 4; i++) {
-                    this.createCard(data[i]);
-                }
-
                 if (translate === 0) {
+                    for (var i = 0; i < 4; i++) {
+                        this.createCard(data[i]);
+                    }
+
                     $('.portfolio__controls span:nth-child(1)').css('color', '#444444');
                     $('.portfolio__controls span:nth-child(2)').css('color', '#fff');
                     $('.portfolio-link').css('display', 'flex');
+                    $('.portfolio-recent').css('display', 'none');
                     if (this.cardsCounter !== 4) this.cardsCounter = 4;
                 } else {
                     $('.portfolio__controls span:nth-child(1)').css('color', '#fff');
                     $('.portfolio__controls span:nth-child(2)').css('color', '#444444');
                     $('.portfolio-link').css('display', 'none');
+                    $('.portfolio-recent').css('display', 'flex');
                 }
             }
         }]);

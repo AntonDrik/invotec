@@ -11,8 +11,18 @@
   height: 100%;
 }
 .header-content-block__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -108,8 +118,18 @@
   height: 100%;
 }
 .contact-header-content-block__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -249,8 +269,14 @@
   background-position: right;
 }
 .right-img-block__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .right-img-block__img {
@@ -300,6 +326,8 @@
   max-width: 420px;
 }
 .sectors-sector .d-flex {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -427,7 +455,6 @@
   cursor: pointer;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -441,19 +468,37 @@
   cursor: pointer;
   top: 80%;
   -webkit-transition-property: top, bottom;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 .card-info__top {
   height: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .card-info__name, .card-info__position, .card-info__text {
   color: #ffffff !important;
 }
 .card-info__title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .card-info__name {
@@ -470,16 +515,30 @@
 }
 .card-info__links {
   width: 55px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .card-info__links a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .card-info__text {
   padding-top: 5px;
   opacity: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   font-size: 17px;
   font-weight: 500;
@@ -535,6 +594,7 @@
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
+  -webkit-filter: gray;
   filter: gray;
   /* IE 6-9 */
 }
@@ -583,7 +643,13 @@
   margin-left: 0;
 }
 .private-investing__item-elems {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 30px;
 }
@@ -601,10 +667,15 @@
   height: 15px;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
 }
 .private-investing__btns {
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
   justify-content: left;
 }
 .private-investing__btns button:first-child {
@@ -657,7 +728,13 @@
   margin-top: 35px;
 }
 .portfolio__controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border-radius: 25px;
   background-color: #F2F2F2;
@@ -681,13 +758,24 @@
   margin: 0 auto;
   padding-bottom: 70px;
 }
-.portfolio-cards {
+.portfolio-recent, .portfolio-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 0 -15px 100px;
 }
 .portfolio-link {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 140px;
   display: none;
@@ -696,16 +784,30 @@
 .controls__switcher {
   background-color: #FF6C00;
   width: 50%;
+  left: 0;
   height: 23.5px;
   position: absolute;
   border-radius: 25px;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
   transform: translateX(0%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 .portfolio-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0;
   border: 1px solid #C4C4C4;
@@ -717,9 +819,6 @@
   display: block;
   font-weight: 600;
 }
-.portfolio-card img {
-  position: absolute;
-}
 
 .portfolio-card,
 .portfolio-card__info {
@@ -729,9 +828,12 @@
 }
 
 .portfolio-card__info {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
   top: 100%;
+  left: 0;
   overflow: auto;
   background: rgba(255, 108, 0, 0.8);
 }
@@ -845,6 +947,8 @@
 .checkmark {
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   height: 16px;
@@ -1024,6 +1128,8 @@
   position: absolute;
   top: 50%;
   left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .jenkins-info__title {
@@ -1072,9 +1178,9 @@
   }
 
   .eis-fund,
-.what-we-are,
-.what-we-do,
-.seed-left-img {
+  .what-we-are,
+  .what-we-do,
+  .seed-left-img {
     background-image: none;
   }
 
@@ -1156,6 +1262,8 @@
   }
 
   .advisors__btns {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .advisors__btns button {
@@ -1248,7 +1356,7 @@
 }
 @media (max-width: 767px) {
   .what-we-list-item,
-.eis-fund-list-item {
+  .eis-fund-list-item {
     padding-left: 15px;
   }
 
@@ -1265,28 +1373,28 @@
   }
 
   .header-content-block,
-.advantages-section .advantages {
+  .advantages-section .advantages {
     padding: 70px 0;
   }
 
   .what-we-do-funds,
-.what-we-are-years,
-.sectors-sector,
-.why-invest-invest,
-.team-cards,
-.home-comp-adv-section,
-.ies-fund-comp-adv-section,
-.key-points-key {
+  .what-we-are-years,
+  .sectors-sector,
+  .why-invest-invest,
+  .team-cards,
+  .home-comp-adv-section,
+  .ies-fund-comp-adv-section,
+  .key-points-key {
     margin: 100px 0;
   }
 
   .sectors-sector,
-.investors-advantages {
+  .investors-advantages {
     margin: 0 0 100px;
   }
 
   .portfolio-link,
-.advisors {
+  .advisors {
     margin-bottom: 100px;
   }
 
@@ -1361,11 +1469,18 @@
 }
 @media (max-width: 576px) {
   .private-investing__btns,
-.advisors__btns {
+  .advisors__btns {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
   .private-investing__item-elems {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .private-investing__item-elems span, .private-investing__item-elems button {
@@ -1421,25 +1536,25 @@
   }
 
   .what-we-do-funds,
-.what-we-are-years,
-.why-invest-invest,
-.team-cards,
-.home-comp-adv-section,
-.ies-fund-comp-adv-section,
-.key-points-key,
-.investors-advantages {
+  .what-we-are-years,
+  .why-invest-invest,
+  .team-cards,
+  .home-comp-adv-section,
+  .ies-fund-comp-adv-section,
+  .key-points-key,
+  .investors-advantages {
     margin: 70px 0;
   }
 
   .sectors-sector,
-.investors-advantages,
-.portfolio-link,
-.portfolio-cards {
+  .investors-advantages,
+  .portfolio-link,
+  .portfolio-cards {
     margin: 0 0 70px;
   }
 
   .private-investing__item,
-.advantages-section .advantages {
+  .advantages-section .advantages {
     padding: 70px 0;
   }
 
@@ -1520,6 +1635,9 @@
   }
 
   .header-content-block__title {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -1527,5 +1645,3 @@
     border-left: 0;
   }
 }
-
-/*# sourceMappingURL=common.css.map */

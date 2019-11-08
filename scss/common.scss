@@ -831,6 +831,11 @@
   }
 
   &-cards {
+
+  }
+
+  &-recent,
+  &-top {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -847,6 +852,7 @@
 .controls__switcher {
   background-color: #FF6C00;
   width: 50%;
+  left: 0;
   height: 23.5px;
   position: absolute;
   border-radius: 25px;
@@ -868,10 +874,6 @@
     display: block;
     font-weight: 600;
   }
-
-  & img {
-    position: absolute;
-  }
 }
 
 .portfolio-card,
@@ -885,6 +887,7 @@
   transition: 0.5s;
   position: absolute;
   top: 100%;
+  left: 0;
   overflow: auto;
   background: rgba(255, 108, 0, 0.8);
 
