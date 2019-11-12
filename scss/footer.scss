@@ -10,7 +10,9 @@
   }
 
   span.copyright, p.footer-info, .list-inline-item {
+    font-family: 'SF Pro Display';
     font-size: 12px;
+    line-height: 160%;
   }
 
   span.copyright {
@@ -32,12 +34,18 @@
   }
 
   .rule, p.footer-info {
-    color: #1d1d1d;
+    color: #1D1D1F;
   }
 }
 
 .list-inline {
   margin-bottom: 0;
+}
+
+.list-inline-item {
+  & a {
+    font-family: "SF Pro Display";
+  }
 }
 
 

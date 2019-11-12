@@ -4,6 +4,7 @@
 }
 
 .header-content-block {
+  -webkit-background-size: cover;
   background-size: cover;
   margin-bottom: 100px;
 }
@@ -52,18 +53,21 @@
 
 .eis-fund-header-img-block {
   background-image: url("../images/fund_header_bg.png");
+  -webkit-background-size: cover;
   background-size: cover;
   height: 500px;
 }
 
 .contact-header-img-block {
   background-image: url("../images/contact_header_bg.png");
+  -webkit-background-size: cover;
   background-size: cover;
   height: 500px;
 }
 
 .news-header-img-block {
   background-image: url("../images/news_header_bg.png");
+  -webkit-background-size: cover;
   background-size: cover;
   height: 500px;
 }
@@ -112,6 +116,7 @@
 }
 
 .contact-header-content-block {
+  -webkit-background-size: cover;
   background-size: cover;
 }
 .contact-header-content-block__title, .contact-header-content-block__wrapper {
@@ -141,34 +146,6 @@
   padding-left: 65px;
 }
 
-.news-for-you {
-  margin-bottom: 60px;
-}
-.news-for-you .news-row {
-  margin-right: -10px;
-  margin-left: 0px;
-  margin-bottom: 10px;
-}
-.news-for-you .news-item {
-  position: relative;
-  width: 100%;
-}
-.news-for-you .news-item a.date, .news-for-you .news-item a.title {
-  position: absolute;
-  color: #FFF;
-  margin-left: 15px;
-}
-.news-for-you .news-item a.date {
-  font-size: 13px;
-  top: 155px;
-}
-.news-for-you .news-item a.title {
-  font-size: 15px;
-  top: 180px;
-  max-width: 240px;
-  font-weight: bold;
-}
-
 .news-section-header {
   font-size: 17px;
   line-height: 29px;
@@ -176,69 +153,137 @@
   color: #000;
 }
 
+.news-item {
+  overflow: hidden;
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.news-item-img {
+  display: block;
+  width: 100%;
+}
+.news-item-content {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 0;
+  padding: 30px 15px 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.7)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+.news-item-date {
+  position: relative;
+  margin-bottom: 10px;
+  font-weight: 500;
+  padding-left: 25px;
+  font-size: 13px;
+  line-height: 1;
+  color: #ffffff;
+}
+.news-item-date::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/clock.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.news-item-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: #ffffff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.news-item-title:hover, .news-item-title:active, .news-item-title:focus {
+  color: #ffffff;
+}
+
 .recent-news {
   margin-top: 44px;
   margin-bottom: 50px;
 }
-.recent-news .news-row {
-  margin-right: -10px;
-  margin-left: 20px;
+.recent-news-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.recent-news-wrapper-in {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 49%;
+}
+.recent-news-wrapper-in .news-item:first-child, .recent-news-wrapper-in .news-item:nth-child(2) {
   margin-bottom: 10px;
 }
-.recent-news .news-item {
-  position: relative;
-  width: 100%;
+.recent-news-item {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  max-height: 230px;
 }
-.recent-news .news-item a.date, .recent-news .news-item a.title {
-  position: absolute;
-  color: #FFF;
-  margin-left: 15px;
+.recent-news-item-big {
+  width: 54.4%;
+  max-width: 590px;
+  max-height: none;
 }
-.recent-news .news-item a.main-news-date, .recent-news .news-item a.main-news-title {
-  position: absolute;
-  color: #FFF;
-  margin-left: 15px;
+.recent-news-item-big .news-item-content {
+  padding: 45px 30px 30px;
 }
-.recent-news .news-item a.main-news-date {
-  font-size: 13px;
-  top: 370px;
-}
-.recent-news .news-item a.main-news-title {
+.recent-news-item-big .news-item-title {
   font-size: 21px;
-  top: 400px;
-  max-width: 520px;
-  font-weight: bold;
 }
-.recent-news .news-item a.date {
-  font-size: 13px;
-  top: 155px;
+
+.news-for-you {
+  margin-bottom: 60px;
 }
-.recent-news .news-item a.title {
-  font-size: 15px;
-  top: 180px;
-  max-width: 240px;
-  font-weight: bold;
+
+.news-for-you-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -5px;
+  margin-right: -5px;
 }
-.recent-news .recent-news-item {
-  position: relative;
-  width: 100%;
-  margin-right: 0px;
-  margin-left: 0px;
-}
-.recent-news .recent-news-item a.date, .recent-news .recent-news-item a.title {
-  position: absolute;
-  color: #FFF;
-  margin-left: 15px;
-}
-.recent-news .recent-news-item a.date {
-  font-size: 13px;
-  top: 371px;
-}
-.recent-news .recent-news-item a.title {
-  font-size: 21px;
-  top: 396px;
-  max-width: 520px;
-  font-weight: bold;
+.news-for-you-wrapper .news-item {
+  margin-bottom: 10px;
+  width: 25%;
 }
 
 .pagination-section {
@@ -261,9 +306,11 @@
   line-height: 38px;
   max-width: 880px;
 }
+.header-bottom-block .header-content-block__title {
+  display: block;
+}
 
 .right-img-block {
-  padding: 60px 0;
   background-color: #F9F9F9;
   background-repeat: no-repeat;
   background-position: right;
@@ -284,16 +331,22 @@
   position: absolute;
 }
 .right-img-block__left-content {
-  max-width: 470px;
+  max-width: 445px;
+  background-color: #F9F9F9;
+  padding: 60px 20px 60px 0;
 }
 .right-img-block__big-title {
   padding: 15px 0 50px 0;
   margin-bottom: 0;
+  font-family: "SF Pro Display heavy";
 }
 .right-img-block__text {
   font-size: 17px;
   line-height: 28px;
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Text";
+}
+.right-img-block .title__orange {
+  padding-bottom: 15px;
 }
 
 .section-header {
@@ -308,6 +361,7 @@
   background-color: #F9F9F9;
   width: 166px;
   height: 166px;
+  -webkit-border-radius: 50%;
   border-radius: 50%;
   margin: 45px;
 }
@@ -329,6 +383,10 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.sectors-sector .section-header {
+  padding-bottom: 45px;
+  margin-bottom: 0;
 }
 
 .what-we-list-item {
@@ -352,7 +410,7 @@
   font-size: 17px;
   line-height: 28px;
   max-width: 420px;
-  font-family: "SF UI Text";
+  font-family: "SF Pro Text";
   font-weight: normal;
   font-style: normal;
 }
@@ -366,7 +424,6 @@
   line-height: 29px;
   font-weight: 700;
   padding-bottom: 5px;
-  padding-top: 150px;
   color: #000000;
   font-weight: 600;
 }
@@ -377,6 +434,10 @@
   max-width: 420px;
 }
 
+.invest-activities:last-child {
+  margin-left: 60px;
+}
+
 .key-points-key {
   margin-bottom: 135px;
   margin-top: 135px;
@@ -385,7 +446,6 @@
   font-size: 17px;
   line-height: 29px;
   padding-bottom: 5px;
-  padding-top: 150px;
   color: #000000;
   font-weight: 600;
 }
@@ -398,7 +458,7 @@
 
 .key-points-key p,
 .why-invest-invest p {
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Text";
   font-weight: normal;
   font-style: normal;
 }
@@ -418,15 +478,20 @@
   margin-bottom: 135px;
   margin-top: 135px;
 }
-.what-we-do-funds .advantages-post {
-  font-size: 16px;
-  font-family: "SF Pro Display";
-}
 .what-we-do-funds .advantages-block {
   max-width: none;
 }
+.what-we-do-funds .advantages-block:last-child {
+  margin-left: 60px;
+}
 .what-we-do-advantages {
   font-size: 14px;
+  line-height: 20px;
+}
+
+.advantages-post {
+  font-size: 14px;
+  font-family: "SF Pro Text";
   line-height: 20px;
 }
 
@@ -444,6 +509,11 @@
   background-image: url("../images/portfolio  header.png");
   background-position: center;
   height: 500px;
+}
+
+.home-comp-adv-section p,
+.ies-fund-comp-adv-section p {
+  font-family: "SF Pro Display";
 }
 
 .card {
@@ -473,7 +543,6 @@
   transition: 0.5s;
 }
 .card-info__top {
-  height: 65px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -487,6 +556,15 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+.card-info__top .card-info__title {
+  margin-bottom: 10px;
+}
+.card-info__top .card-info__position {
+  margin-bottom: 20px;
+}
+.card-info__top .card-info__name, .card-info__top .card-info__position {
+  color: black !important;
 }
 .card-info__name, .card-info__position, .card-info__text {
   color: #ffffff !important;
@@ -536,14 +614,14 @@
 }
 .card-info__text {
   padding-top: 5px;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   font-size: 17px;
   font-weight: 500;
   line-height: 24px;
-  font-family: "SF Pro Display medium";
+  font-family: "SF Pro Text";
 }
 .card-info__ul {
   padding-left: 16px;
@@ -563,10 +641,23 @@
 .team-cards {
   margin: 100px 0 135px 0;
 }
+.team-cards__title {
+  font-family: "SF Pro Display bold";
+  font-size: 21px;
+  margin-bottom: 20px;
+}
+.team-cards__text {
+  font-family: "SF Pro Text";
+  font-size: 16px;
+}
+.team-cards__card {
+  margin-bottom: 75px;
+}
 
 .team-card {
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 75px;
 }
 .team-card:hover .team-card-info {
   overflow: auto;
@@ -673,10 +764,10 @@
   left: 0;
 }
 .private-investing__btns {
-  -webkit-box-pack: left;
-  -webkit-justify-content: left;
-  -ms-flex-pack: left;
-  justify-content: left;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 .private-investing__btns button:first-child {
   margin-right: 40px;
@@ -704,7 +795,7 @@
 .private-investing__content > p {
   font-size: 17px;
   line-height: 28px;
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Text";
   font-weight: normal;
   font-style: normal;
 }
@@ -723,6 +814,9 @@
 .advisors__btns button:nth-child(3) {
   margin: 0 30px 0 15px;
 }
+.advisors__btns button {
+  width: auto;
+}
 
 .portfolio {
   margin-top: 35px;
@@ -736,6 +830,7 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-border-radius: 25px;
   border-radius: 25px;
   background-color: #F2F2F2;
   padding: 4px 5px;
@@ -745,6 +840,7 @@
 }
 .portfolio__controls span {
   width: 50%;
+  -webkit-border-radius: 25px;
   border-radius: 25px;
   text-align: center;
   z-index: 2;
@@ -787,6 +883,7 @@
   left: 0;
   height: 23.5px;
   position: absolute;
+  -webkit-border-radius: 25px;
   border-radius: 25px;
   -webkit-transform: translateX(0%);
   -ms-transform: translateX(0%);
@@ -895,7 +992,7 @@
   font-weight: 600;
 }
 .modal-content__accept {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .modal-content__checkbox {
   display: block;
@@ -930,14 +1027,13 @@
   font-size: 17px;
   line-height: 28px;
 }
-.modal-content__policy span {
-  color: #0066CC;
-}
 .modal-content__policy h5 {
   font-weight: 600;
+  margin-bottom: 15px;
 }
 .modal-content__policy p {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  line-height: 28px;
 }
 
 .modal-header {
@@ -953,6 +1049,7 @@
   left: 0;
   height: 16px;
   width: 16px;
+  -webkit-border-radius: 2px;
   border-radius: 2px;
   background-color: #ffffff;
   border: 2px solid #FF6C00;
@@ -965,6 +1062,7 @@
   top: 0;
   width: 5px;
   height: 10px;
+  -webkit-border-radius: 1px;
   border-radius: 1px;
   border: solid white;
   border-width: 0 2px 2px 0;
@@ -978,6 +1076,7 @@
 }
 .text-page p {
   font-size: 17px;
+  font-family: "SF Pro Text";
 }
 .text-page__header {
   text-align: center;
@@ -993,6 +1092,7 @@
 }
 .text-page__header p {
   line-height: 25px;
+  font-family: "SF Pro Text semi";
 }
 .text-page__header p:first-child {
   padding-bottom: 20px;
@@ -1018,15 +1118,16 @@
   font-weight: 600;
   color: #000000;
   font-size: 21px;
+  font-family: "SF Pro Text semi";
 }
 .text-page__content h5 span {
   font-weight: 500;
   font-size: 17px;
-  font-family: "SF UI Text";
+  font-family: "SF Pro Text semi";
 }
 .text-page__content h6 {
   font-weight: 800;
-  font-family: "SF UI Text";
+  font-family: "SF Pro Text semi";
   margin: 0;
   color: #000000;
   font-size: 17px;
@@ -1043,10 +1144,11 @@
   padding-left: 10px;
   line-height: 24px;
   margin-bottom: 5px;
+  font-family: "SF Pro Text";
 }
 
 .news-section .publish-info {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .news-section .publish-info .author, .news-section .publish-info .date {
   font-size: 17px;
@@ -1074,7 +1176,7 @@
   margin-bottom: 15px;
   font-size: 17px;
   line-height: 28px;
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Text";
 }
 .news-section .middle-photo {
   margin: 15px auto 30px auto;
@@ -1088,11 +1190,15 @@
   max-width: 561px;
   min-height: 421px;
   float: left;
-  margin: 7px 48px 28px 0;
+  margin: 7px 48px 10px 0;
 }
 
 .seed-left-img {
   background-image: url("../images/seed-left-img.png");
+}
+
+.seed-angel__services-block {
+  min-height: 200px;
 }
 
 .product-about {
@@ -1172,20 +1278,13 @@
     max-width: 30%;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  .right-img-block__left-content {
+    max-width: 34%;
+  }
+
   .team-card-info {
     top: 75%;
-  }
-
-  .eis-fund,
-  .what-we-are,
-  .what-we-do,
-  .seed-left-img {
-    background-image: none;
-  }
-
-  .right-img-block__left-content {
-    max-width: 90%;
   }
 
   .modal-dialog {
@@ -1196,67 +1295,34 @@
     margin: 20px;
   }
 
-  .recent-news .recent-news-item {
-    margin-right: 0px;
-    margin-left: 35px;
+  .recent-news-wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 590px;
   }
-  .recent-news .news-item {
-    position: relative;
+  .recent-news-wrapper-in {
     width: 100%;
-    padding-bottom: 10px;
+    max-width: none;
   }
-  .recent-news .news-item .news-img {
-    width: 400px;
-  }
-  .recent-news .news-item .main-news-img {
-    width: 860px;
-    height: 50%;
-  }
-  .recent-news .news-item a.main-news-date, .recent-news .news-item a.main-news-title, .recent-news .news-item a.date, .recent-news .news-item a.title {
-    padding-left: 15px;
-  }
-  .recent-news .news-item a.main-news-date {
-    top: 590px;
-  }
-  .recent-news .news-item a.main-news-title {
-    width: 600px;
-    top: 630px;
-  }
-  .recent-news .news-item a.date {
-    top: 280px;
-  }
-  .recent-news .news-item a.title {
-    font-size: 15px;
-    top: 310px;
-    max-width: 245px;
-    font-weight: bold;
-    text-align: left;
-  }
-
-  .news-for-you .news-item {
-    position: relative;
+  .recent-news-item-big {
+    margin-bottom: 10px;
     width: 100%;
-    padding-bottom: 10px;
-  }
-  .news-for-you .news-item .news-img {
-    width: 400px;
-  }
-  .news-for-you .news-item a.date {
-    padding-top: 110px;
-    padding-left: 15px;
-  }
-  .news-for-you .news-item a.title {
-    padding-left: 15px;
-  }
-  .news-for-you .news-item a.title {
-    font-size: 15px;
-    padding-top: 110px;
-    max-width: 245px;
-    font-weight: bold;
-    text-align: left;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1120px) {
+  .eis-fund,
+.what-we-are,
+.what-we-do,
+.seed-left-img {
+    background-image: none;
+  }
+
+  .right-img-block__left-content {
+    max-width: 90%;
+  }
+}
+@media (max-width: 991px) {
   .private-investing__content > p {
     padding-top: 20px;
   }
@@ -1275,88 +1341,28 @@
   }
 
   .right-img-block__left-content {
-    max-width: 90%;
+    max-width: 100%;
   }
 
-  .recent-news {
-    position: relative;
-    width: 100%;
-  }
-  .recent-news .recent-news-item {
-    margin-right: 0px;
-    margin-left: 20px;
-  }
-  .recent-news .news-item {
-    padding-bottom: 10px;
-  }
-  .recent-news .news-item .news-img {
-    width: 670px;
-    height: 50%;
-  }
-  .recent-news .news-item .main-news-img {
-    width: 670px;
-  }
-  .recent-news .news-item a.main-news-date {
-    padding-top: 70px;
-    padding-left: 15px;
-    top: 370px;
-    font-size: 21px;
-  }
-  .recent-news .news-item a.main-news-title {
-    width: 600px;
-    padding-top: 70px;
-    padding-left: 15px;
-    top: 400px;
-    font-size: 21px;
-  }
-  .recent-news .news-item a.date {
-    padding-top: 335px;
-    padding-left: 15px;
-    top: 155px;
-    font-size: 21px;
-  }
-  .recent-news .news-item a.title {
-    padding-left: 15px;
-    top: 180px;
-  }
-  .recent-news .news-item a.title {
-    font-size: 21px;
-    padding-top: 335px;
-    max-width: 300px;
-    font-weight: bold;
-    text-align: left;
+  .invest-activities:last-child {
+    margin-left: 0;
   }
 
-  .news-for-you {
-    position: relative;
-    width: 100%;
+  .list-inline-item:first-child {
+    display: block;
   }
-  .news-for-you .news-item {
-    padding-bottom: 10px;
+
+  .what-we-do-funds .advantages-block:last-child {
+    margin-left: 0;
   }
-  .news-for-you .news-item .news-img {
-    width: 670px;
-    height: 50%;
-  }
-  .news-for-you .news-item a.date {
-    padding-top: 315px;
-    padding-left: 15px;
-    font-size: 21px;
-  }
-  .news-for-you .news-item a.title {
-    padding-left: 15px;
-  }
-  .news-for-you .news-item a.title {
-    font-size: 21px;
-    padding-top: 320px;
-    max-width: 300px;
-    font-weight: bold;
-    text-align: left;
+
+  .news-for-you-wrapper .news-item {
+    width: 33.3%;
   }
 }
 @media (max-width: 767px) {
   .what-we-list-item,
-  .eis-fund-list-item {
+.eis-fund-list-item {
     padding-left: 15px;
   }
 
@@ -1373,28 +1379,33 @@
   }
 
   .header-content-block,
-  .advantages-section .advantages {
+.advantages-section .advantages {
     padding: 70px 0;
   }
 
   .what-we-do-funds,
-  .what-we-are-years,
-  .sectors-sector,
-  .why-invest-invest,
-  .team-cards,
-  .home-comp-adv-section,
-  .ies-fund-comp-adv-section,
-  .key-points-key {
+.what-we-are-years,
+.sectors-sector,
+.why-invest-invest,
+.team-cards,
+.home-comp-adv-section,
+.ies-fund-comp-adv-section,
+.key-points-key {
     margin: 100px 0;
   }
 
+  .what-we-do-funds .advantages-block:last-child {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
   .sectors-sector,
-  .investors-advantages {
+.investors-advantages {
     margin: 0 0 100px;
   }
 
   .portfolio-link,
-  .advisors {
+.advisors {
     margin-bottom: 100px;
   }
 
@@ -1402,74 +1413,24 @@
     padding-bottom: 30px;
   }
 
-  .news-for-you {
-    position: relative;
-    width: 100%;
-  }
-  .news-for-you .news-item {
-    padding-bottom: 10px;
-  }
-  .news-for-you .news-item .news-img {
-    width: 430px;
-    height: 50%;
-  }
-  .news-for-you .news-item a.date, .news-for-you .news-item a.title {
-    padding-left: 30px;
-    font-size: 21px;
-  }
-  .news-for-you .news-item a.date {
-    padding-top: 110px;
-    padding-left: 30px;
-  }
-  .news-for-you .news-item a.title {
-    padding-top: 110px;
-    max-width: 300px;
-    font-weight: bold;
-    text-align: left;
+  .why-invest-invest p,
+.what-we-are-years p,
+.key-points-key p {
+    max-width: none;
   }
 
-  .recent-news {
-    position: relative;
-    width: 100%;
+  .recent-news-wrapper {
+    margin-left: -5px;
+    margin-right: -5px;
   }
-  .recent-news .recent-news-item {
-    margin-right: 0px;
-    margin-left: 15px;
-  }
-  .recent-news .news-item {
-    padding-bottom: 10px;
-  }
-  .recent-news .news-item .news-img {
-    width: 430px;
-    height: 50%;
-  }
-  .recent-news .news-item .main-news-img {
-    width: 430px;
-  }
-  .recent-news .news-item a.main-news-date, .recent-news .news-item a.main-news-title, .recent-news .news-item a.date, .recent-news .news-item a.title {
-    padding-left: 30px;
-    font-size: 21px;
-  }
-  .recent-news .news-item a.main-news-date {
-    top: 180px;
-  }
-  .recent-news .news-item a.main-news-title {
-    width: 320px;
-    top: 210px;
-  }
-  .recent-news .news-item a.date {
-    padding-top: 105px;
-  }
-  .recent-news .news-item a.title {
-    padding-top: 115px;
-    max-width: 300px;
-    font-weight: bold;
-    text-align: left;
+
+  .news-for-you-wrapper .news-item {
+    width: 50%;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .private-investing__btns,
-  .advisors__btns {
+.advisors__btns {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -1492,6 +1453,7 @@
 
   .header-img-block__big-title {
     font-size: 44px;
+    text-align: center;
   }
 
   .header-bottom-block__big-title {
@@ -1505,6 +1467,7 @@
 
   .modal-content {
     border: none;
+    -webkit-border-radius: 0px;
     border-radius: 0px;
   }
 
@@ -1531,30 +1494,30 @@
     font-size: 14px;
   }
   .modal-content__text h5 {
-    font-family: "SF UI Text";
+    font-family: "SF Pro Text semi";
     font-weight: 500;
   }
 
   .what-we-do-funds,
-  .what-we-are-years,
-  .why-invest-invest,
-  .team-cards,
-  .home-comp-adv-section,
-  .ies-fund-comp-adv-section,
-  .key-points-key,
-  .investors-advantages {
+.what-we-are-years,
+.why-invest-invest,
+.team-cards,
+.home-comp-adv-section,
+.ies-fund-comp-adv-section,
+.key-points-key,
+.investors-advantages {
     margin: 70px 0;
   }
 
   .sectors-sector,
-  .investors-advantages,
-  .portfolio-link,
-  .portfolio-cards {
+.investors-advantages,
+.portfolio-link,
+.portfolio-cards {
     margin: 0 0 70px;
   }
 
   .private-investing__item,
-  .advantages-section .advantages {
+.advantages-section .advantages {
     padding: 70px 0;
   }
 
@@ -1570,68 +1533,18 @@
     top: 85%;
   }
 
-  .news-for-you {
-    position: relative;
+  .text-left {
+    position: absolute;
+    bottom: 25px;
     width: 100%;
-  }
-  .news-for-you .news-item {
-    padding-bottom: 10px;
-  }
-  .news-for-you .news-item .news-img {
-    width: 300px;
-    height: 50%;
-  }
-  .news-for-you .news-item a.date, .news-for-you .news-item a.title {
-    padding-left: 100px;
-    font-size: 21px;
-  }
-  .news-for-you .news-item a.date {
-    top: 50px;
-  }
-  .news-for-you .news-item a.title {
-    top: 80px;
-    max-width: 300px;
-    font-weight: bold;
-    text-align: left;
   }
 
-  .recent-news {
-    position: relative;
-    width: 100%;
-  }
-  .recent-news .recent-news-item {
-    margin-right: 0px;
-    margin-left: 15px;
-  }
-  .recent-news .news-item {
-    padding-bottom: 10px;
-  }
-  .recent-news .news-item .news-img {
-    width: 300px;
-    height: 50%;
-  }
-  .recent-news .news-item .main-news-img {
-    width: 300px;
-  }
-  .recent-news .news-item a.main-news-date, .recent-news .news-item a.main-news-title, .recent-news .news-item a.date, .recent-news .news-item a.title {
-    padding-left: 100px;
-    font-size: 21px;
-  }
-  .recent-news .news-item a.main-news-date {
-    top: 20px;
-  }
-  .recent-news .news-item a.main-news-title {
-    width: 290px;
-    top: 50px;
-  }
-  .recent-news .news-item a.date {
-    top: 0px;
-  }
-  .recent-news .news-item a.title {
-    top: 25px;
-    max-width: 300px;
-    font-weight: bold;
-    text-align: left;
+  a.main-news-date, a.main-news-title, a.date, a.title {
+    padding-left: 0 !important;
+    top: 0 !important;
+    display: block !important;
+    padding: 0 !important;
+    position: relative !important;
   }
 
   .header-content-block__title {
@@ -1644,4 +1557,39 @@
   .jenkins-contacts {
     border-left: 0;
   }
+
+  .home-comp-adv-section p,
+.ies-fund-comp-adv-section p {
+    font-family: "SF Pro Display";
+    font-size: 24px;
+  }
+
+  .portfolio__controls span {
+    font-size: 12px;
+    line-height: 25px;
+  }
 }
+@media (max-width: 460px) {
+  .recent-news-wrapper-in {
+    display: block;
+  }
+  .recent-news-wrapper-in .recent-news-item:nth-child(3) {
+    margin-bottom: 10px;
+  }
+  .recent-news-item {
+    width: 100%;
+    max-height: none;
+  }
+  .recent-news-item-big .news-item-content {
+    padding: 30px 15px 15px;
+  }
+  .recent-news-item-big .news-item-title {
+    font-size: 15px;
+  }
+
+  .news-for-you-wrapper .news-item {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */

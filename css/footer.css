@@ -6,7 +6,9 @@
   padding-bottom: 10px;
 }
 .footer span.copyright, .footer p.footer-info, .footer .list-inline-item {
+  font-family: "SF Pro Display";
   font-size: 12px;
+  line-height: 160%;
 }
 .footer span.copyright {
   color: #86868B;
@@ -22,11 +24,13 @@
   margin-right: 77px;
 }
 .footer .rule, .footer p.footer-info {
-  color: #1d1d1d;
+  color: #1D1D1F;
 }
 
 .list-inline {
   margin-bottom: 0;
 }
 
-/*# sourceMappingURL=footer.css.map */
+.list-inline-item a {
+  font-family: "SF Pro Display";
+}

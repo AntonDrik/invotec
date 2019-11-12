@@ -3,8 +3,10 @@ $(document).ready(function () {
         $('#Modal').modal('show');
     }
 
-    $('.modal-content__checkbox').click(function () {
-        document.cookie = "visited=true; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+    $('.btn__accept').click(function () {
+        if ($('.modal-content__checkbox input').is(':checked')) {
+            document.cookie = "visited=true; path=/; expires=Tue, 19 Jan 2038 03:14:07 GMT";
+        }
     });
 
 });

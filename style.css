@@ -5,6 +5,16 @@
 }
 
 @font-face {
+    font-family: 'SF Pro Text';
+    src: url('font/SF-Pro-Text-Regular.otf');
+}
+
+@font-face {
+    font-family: 'SF Pro Text semi';
+    src: url('font/SF-Pro-Text-Semibold.otf');
+}
+
+@font-face {
     font-family: 'SF Pro Display medium';
     src: url('font/SFProDisplay-Medium.eot');
     src: local('font/SF Pro Display Medium'), local('SFProDisplay-Medium'),
@@ -39,30 +49,8 @@
     font-weight: 900;
     font-style: normal;
 }
-
-@font-face {
-    font-family: 'SF UI Text';
-    src: url('font/SFUIText-Regular.eot');
-    src: local('SF UI Text Regular'), local('SFUIText-Regular'),
-    url('font/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
-    url('font/SFUIText-Regular.woff') format('woff'),
-    url('font/SFUIText-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'SF UI Text';
-    src: url('font/SFUIText-Medium.eot');
-    src: local('SF UI Text Medium'), local('SFUIText-Medium'),
-    url('font/SFUIText-Medium.eot?#iefix') format('embedded-opentype'),
-    url('font/SFUIText-Medium.woff') format('woff'),
-    url('font/SFUIText-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
 * {
-    font-family: "SF Pro Display";
+    font-family: "SF Pro Text";
     color: #444444;
 }
 html, body, div, span, applet, object, iframe,
@@ -153,6 +141,13 @@ body {
     color: #ffffff;
 }
 
+.btn__accept {
+    font-family: "SF Pro Display bold";
+    width: 160px;
+    margin-bottom: 10px;
+    color: #FFFFFF !important;
+}
+
 .btn__orange:hover {
     background-color: #ff600f;
 }
@@ -172,6 +167,7 @@ body {
 }
 
 .btn__white:focus {
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
 
@@ -185,6 +181,7 @@ body {
     color: #FF6C00;
     padding-bottom: 30px;
     font-family: "SF Pro Display bold";
+    display: block;
 }
 
 .title__orange-italic {
@@ -205,12 +202,12 @@ body {
 /* Wrapper */
 
 .wrapper {
-	min-width: 320px;
-	max-width: 1600px;
-	margin: 0 auto;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
+    min-width: 320px;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
 }
 
 
@@ -235,6 +232,5 @@ body {
     max-width: 1600px;
     background: #F2F2F2;
     position: relative;
-    padding: 20px 0;
+    padding: 30px 0;
 }
-

@@ -12,6 +12,13 @@
   .advantages-block {
     max-width: 290px;
     min-height: 235px;
+    &:first-child {
+      margin-right: 20px;
+    }
+    &:last-child {
+      margin-left: 20px;
+    }
+
 
     & h6 {
       margin-top: 20px;
@@ -106,7 +113,7 @@
   margin-top: 135px;
   margin-bottom: 135px;
   display: flex;
-  min-height: 503px;
+  height: 503px;
 
     p {
       color: #FFFFFF;
@@ -175,7 +182,7 @@
   z-index: 999;
   right: 245px;
   bottom: 50px;
-  width: 220px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
   line-height: 37px;
@@ -185,6 +192,8 @@
     font-size: 16px;
     line-height: 37px;
     color: #ffffff;
+    font-family: 'SF Pro Display';
+    font-weight: 200;
 
     &:hover {
       text-decoration: none;
@@ -198,8 +207,9 @@
 }
 
 .slider-banner {
-
+  height: 415px;
   margin-left: 245px;
+  position: relative;
 
   .banner-header {
     p {
@@ -232,6 +242,14 @@
     font-size: 21px;
     width: 166px;
     min-height: 40px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    &:focus,
+    &:active {
+      box-shadow: none;
+    }
+  
   }
 
 }

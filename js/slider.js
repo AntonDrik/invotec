@@ -8,7 +8,7 @@ $(document).ready(function () {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 10000,
-        infinite: true,
+        infinite: false,
         slidesToShow: 1
     });
 

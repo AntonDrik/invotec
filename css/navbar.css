@@ -19,8 +19,9 @@
   color: #ffffff;
   font-weight: bold;
   font-size: 14px;
-  padding-bottom: 0;
+  padding-bottom: 16px;
   padding-left: 10px;
+  padding-top: 17px;
 }
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #e6e6e6;
@@ -46,9 +47,7 @@
   padding: 0.75em 0.5em;
   color: white;
   font-size: 14px;
-  font-family: "SF Pro Display";
-  font-weight: 500;
-  font-style: normal;
+  font-family: "SF Pro Text";
 }
 #mainNav .navbar-nav .nav-item .nav-link:active, #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:focus {
   color: #FF6C00 !important;
@@ -68,9 +67,7 @@
   color: #ffffff;
   background-color: transparent;
   padding: 0.25rem 0.5rem;
-  font-family: "SF Pro Display";
-  font-weight: 500;
-  font-style: normal;
+  font-family: "SF Pro Text";
 }
 #mainNav .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover, #mainNav .navbar-nav .nav-item .dropdown-menu .dropdown-item:focus {
   color: #FF6C00;
@@ -93,12 +90,14 @@
   transform: rotate(45deg);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #mainNav .navbar-nav {
     margin-left: 0 !important;
   }
   #mainNav .navbar-nav .nav-item {
     display: contents;
-    height: auto;
+  }
+  #mainNav .navbar-nav .nav-item .dropdown-menu {
+    background-color: transparent;
   }
 }

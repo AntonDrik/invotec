@@ -141,11 +141,13 @@ var Portfolio =
             value: function createCard(data) {
                 var card = document.querySelector('.top-card').cloneNode(true);
                 card.querySelector('a').innerText = data.link;
+                card.querySelector('a').target = '_blank';
                 card.querySelector('a').href = data.href;
                 card.querySelector('span').innerText = "(".concat(data.fund, " Fund)");
                 card.querySelector('p').innerHTML = data.text;
                 card.querySelector('img').src = data.img;
-                card.style.display = 'flex'; // data.advantagesList.forEach( item => {
+                card.style.display = 'flex';
+                // data.advantagesList.forEach( item => {
                 //     const li = document.createElement('li');
                 //     li.innerHTML = item;
                 //     card.querySelector('ul').appendChild(li);

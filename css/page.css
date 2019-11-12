@@ -10,6 +10,12 @@
   max-width: 290px;
   min-height: 235px;
 }
+.advantages-section .advantages-block:first-child {
+  margin-right: 20px;
+}
+.advantages-section .advantages-block:last-child {
+  margin-left: 20px;
+}
 .advantages-section .advantages-block h6 {
   margin-top: 20px;
   font-style: italic;
@@ -107,7 +113,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 503px;
+  height: 503px;
 }
 .home-comp-adv-section p, .ies-fund-comp-adv-section p {
   color: #FFFFFF;
@@ -174,7 +180,7 @@
   z-index: 999;
   right: 245px;
   bottom: 50px;
-  width: 220px;
+  width: 250px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -190,6 +196,8 @@
   font-size: 16px;
   line-height: 37px;
   color: #ffffff;
+  font-family: "SF Pro Display";
+  font-weight: 200;
 }
 .action a:hover {
   text-decoration: none;
@@ -200,7 +208,9 @@
 }
 
 .slider-banner {
+  height: 415px;
   margin-left: 245px;
+  position: relative;
 }
 .slider-banner .banner-header p {
   font-size: 86px;
@@ -225,6 +235,13 @@
   font-size: 21px;
   width: 166px;
   min-height: 40px;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+}
+.slider-banner .learn-more-btn:focus, .slider-banner .learn-more-btn:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 @media (max-width: 992px) {
