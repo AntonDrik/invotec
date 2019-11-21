@@ -5,6 +5,7 @@
   line-height: 52px;
   font-weight: 600;
   color: #1D1D1F;
+  font-family: "SF Pro Display bold";
 }
 .advantages-section .advantages-block {
   max-width: 290px;
@@ -44,9 +45,10 @@
   align-items: center;
 }
 .advantages-header-non-arrow a {
-  color: #444444;
+  color: #000000;
   position: relative;
   padding-right: 10px;
+  font-family: "SF Pro Display";
 }
 .advantages-header-non-arrow a:hover {
   text-decoration: underline;
@@ -74,6 +76,7 @@
   color: #0066CC;
   position: relative;
   padding-right: 10px;
+  font-family: "SF Pro Display";
 }
 .advantages-header a:after {
   content: "";
@@ -92,11 +95,13 @@
 
 .home-comp-adv-section {
   background: url("/images/comp-adv-bg.png") no-repeat;
+  -webkit-background-size: cover;
   background-size: cover;
 }
 
 .ies-fund-comp-adv-section {
   background: url("/images/funds_2.png") no-repeat;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
 }
@@ -215,7 +220,7 @@
 .slider-banner .banner-header p {
   font-size: 86px;
   line-height: 110%;
-  font-weight: bold;
+  font-family: "SF Pro Display bold";
 }
 .slider-banner .banner-post {
   padding-bottom: 60px;
@@ -224,15 +229,17 @@
   max-width: 650px;
   font-size: 18px;
   line-height: 29px;
+  font-family: "SF Pro Display medium";
 }
 .slider-banner .banner-header p, .slider-banner .banner-post p {
   color: #ffffff;
 }
 .slider-banner .learn-more-btn {
+  -webkit-border-radius: 30px;
   border-radius: 30px;
   background-color: #FF6C00;
   border: 0;
-  font-size: 21px;
+  font-size: 17px;
   width: 166px;
   min-height: 40px;
   color: #ffffff;
@@ -300,3 +307,5 @@
     transform: translateX(50%);
   }
 }
+
+/*# sourceMappingURL=page.css.map */

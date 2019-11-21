@@ -48,7 +48,7 @@
 }
 .header-img-block__big-title {
   font-size: 64px;
-  font-weight: 600;
+  font-family: "SF Pro Display bold";
 }
 
 .eis-fund-header-img-block {
@@ -146,11 +146,17 @@
   padding-left: 65px;
 }
 
+.recent-news .p-2,
+.news-for-you .p-2 {
+  padding-left: 0 !important;
+}
+
 .news-section-header {
   font-size: 17px;
   line-height: 29px;
   margin-bottom: 15px;
   color: #000;
+  font-family: "SF Pro Display bold";
 }
 
 .news-item {
@@ -182,6 +188,7 @@
   font-size: 13px;
   line-height: 1;
   color: #ffffff;
+  font-family: "SF Pro Text";
 }
 .news-item-date::before {
   content: "";
@@ -204,6 +211,7 @@
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  font-family: "SF Pro Display bold";
 }
 .news-item-title:hover, .news-item-title:active, .news-item-title:focus {
   color: #ffffff;
@@ -305,6 +313,8 @@
   font-size: 24px;
   line-height: 38px;
   max-width: 880px;
+  font-family: "SF Pro Display medium";
+  color: #4B4B4B;
 }
 .header-bottom-block .header-content-block__title {
   display: block;
@@ -354,7 +364,7 @@
   font-size: 48px;
   line-height: 52px;
   color: #1D1D1F;
-  font-weight: bold;
+  font-family: "SF Pro Display bold";
 }
 
 .fund-sector-items {
@@ -378,6 +388,7 @@
   line-height: 21px;
   color: #FF6C00;
   max-width: 420px;
+  font-family: "SF Pro Display";
 }
 .sectors-sector .d-flex {
   -webkit-flex-wrap: wrap;
@@ -404,6 +415,7 @@
   border-bottom: 2px solid #FF6C00;
   padding-bottom: 5px;
   padding-top: 150px;
+  color: black;
 }
 .what-we-are-years p {
   margin-top: 15px;
@@ -422,10 +434,10 @@
 .why-invest-invest span {
   font-size: 17px;
   line-height: 29px;
-  font-weight: 700;
   padding-bottom: 5px;
   color: #000000;
-  font-weight: 600;
+  font-family: "SF Pro Display";
+  font-weight: 700;
 }
 .why-invest-invest p {
   margin-top: 15px;
@@ -448,6 +460,7 @@
   padding-bottom: 5px;
   color: #000000;
   font-weight: 600;
+  font-family: "SF Pro Display";
 }
 .key-points-key p {
   margin-top: 15px;
@@ -645,6 +658,7 @@
   font-family: "SF Pro Display bold";
   font-size: 21px;
   margin-bottom: 20px;
+  color: black;
 }
 .team-cards__text {
   font-family: "SF Pro Text";
@@ -664,6 +678,9 @@
 }
 .team-card:hover .card-info__text {
   opacity: 1;
+}
+.team-card p {
+  font-family: "SF Pro Text";
 }
 
 .team-card-info {
@@ -848,6 +865,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-family: "SF Pro Display medium";
 }
 .portfolio__controls-wrapper {
   max-width: 460px;
@@ -914,7 +932,8 @@
 .portfolio-card__fund {
   color: white;
   display: block;
-  font-weight: 600;
+  font-family: "SF Pro Display bold";
+  font-size: 14px;
 }
 
 .portfolio-card,
@@ -1247,6 +1266,7 @@
   font-family: "SF Pro Display medium";
   font-size: 19px;
   margin-top: 30px;
+  line-height: 31px;
 }
 
 .jenkins-contacts {
@@ -1254,13 +1274,14 @@
   padding-left: 30px;
 }
 .jenkins-contacts__ul li {
-  font-family: "SF Pro Display";
+  font-family: "SF Pro Text";
 }
 .jenkins-contacts__ul li:first-child {
   font-family: "SF Pro Display bold";
 }
 .jenkins-contacts a {
   display: block;
+  font-family: "SF Pro Text";
 }
 
 @media (min-width: 576px) {
@@ -1376,6 +1397,13 @@
 
   .section-padding {
     padding-left: 15px;
+  }
+
+  .advantages-section .advantages-block:first-child {
+    margin-right: 0;
+  }
+  .advantages-section .advantages-block:last-child {
+    margin-left: 0;
   }
 
   .header-content-block,

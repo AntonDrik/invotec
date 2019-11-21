@@ -134,6 +134,8 @@ body {
     font-size: 21px;
     width: 210px;
     min-height: 40px;
+    font-family: "SF Pro Display";
+    font-weight: 600;
 }
 
 .btn__orange {
@@ -189,6 +191,7 @@ body {
     font-style: italic;
     font-size: 17px;
     line-height: 28px;
+    font-family: "SF Pro Text";
 }
 
 .title__big {

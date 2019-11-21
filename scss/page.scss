@@ -7,6 +7,7 @@
     line-height: 52px;
     font-weight: 600;
     color: #1D1D1F;
+    font-family: "SF Pro Display bold";
   }
 
   .advantages-block {
@@ -28,6 +29,8 @@
   }
 
   right-arrow {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
   }
 
@@ -44,13 +47,20 @@
 .advantages-header-non-arrow {
 
   font-size: 21px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 
   a {
-    color:#444444;
+    color:#000000;
     position: relative;
     padding-right: 10px;
+    font-family: "SF Pro Display";
 
     &:hover {
       text-decoration: underline;
@@ -63,7 +73,13 @@
 
 .advantages-header {
   font-size: 21px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
 
   &:hover {
@@ -78,6 +94,7 @@
     color: #0066CC;
     position: relative;
     padding-right: 10px;
+    font-family: "SF Pro Display";
 
     &:after {
       content: "";
@@ -89,6 +106,8 @@
       border-left: 1px solid;
       height: 7px;
       width: 7px;
+      -webkit-transform: rotate(225deg) translateY(50%);
+      -ms-transform: rotate(225deg) translateY(50%);
       transform: rotate(225deg) translateY(50%);
     }
   }
@@ -97,28 +116,36 @@
 
 .home-comp-adv-section {
   background: url("/images/comp-adv-bg.png") no-repeat;
+  -webkit-background-size: cover;
   background-size: cover;
 }
 
 .ies-fund-comp-adv-section {
   background: url("/images/funds_2.png") no-repeat;
+  -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
 }
 
 
 .home-comp-adv-section, .ies-fund-comp-adv-section {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   margin-top: 135px;
   margin-bottom: 135px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   height: 503px;
 
-    p {
-      color: #FFFFFF;
-      font-size: 28px;
-    }
+  p {
+    color: #FFFFFF;
+    font-size: 28px;
+  }
 }
 
 .what-we-do-divider {
@@ -171,7 +198,6 @@
   top: 170px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -183,7 +209,13 @@
   right: 245px;
   bottom: 50px;
   width: 250px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   line-height: 37px;
   text-align: right;
@@ -215,7 +247,7 @@
     p {
       font-size: 86px;
       line-height: 110%;
-      font-weight: bold;
+      font-family: "SF Pro Display bold";
     }
   }
 
@@ -226,6 +258,7 @@
       max-width: 650px;
       font-size: 18px;
       line-height: 29px;
+      font-family: "SF Pro Display medium";
     }
   }
 
@@ -236,10 +269,11 @@
   }
 
   .learn-more-btn {
+    -webkit-border-radius: 30px;
     border-radius: 30px;
     background-color: #FF6C00;
     border: 0;
-    font-size: 21px;
+    font-size: 17px;
     width: 166px;
     min-height: 40px;
     color: #ffffff;
@@ -247,9 +281,10 @@
     bottom: 0;
     &:focus,
     &:active {
+      -webkit-box-shadow: none;
       box-shadow: none;
     }
-  
+
   }
 
 }
@@ -300,9 +335,7 @@
 }
 
 @media (max-width: 576px) {
-  .slider-banner {
 
-  }
   .banner-post {
     padding-bottom: 30px;
 
@@ -315,7 +348,8 @@
   }
   .action {
     right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
 }
-

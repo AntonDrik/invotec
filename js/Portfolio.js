@@ -177,21 +177,21 @@ var Portfolio =
                 portfolioTop.empty();
                 var translate = switcher.css('transform').match(/matrix\(\d+, ?\d+, ?\d+, ?\d+, ?(\d+)/)[1];
                 translate = parseInt(translate);
-                switcher.css('transform', "translateX(".concat(translate === 0 ? 95.5 : 0, "%)"));
+                switcher.css('transform', "translateX(".concat(translate === 0 ? 97 : 0, "%)"));
 
                 if (translate === 0) {
                     for (var i = 0; i < 4; i++) {
                         this.createCard(data[i]);
                     }
 
-                    $('.portfolio__controls span:nth-child(1)').css('color', '#444444');
+                    $('.portfolio__controls span:nth-child(1)').css('color', '#86868B');
                     $('.portfolio__controls span:nth-child(2)').css('color', '#fff');
                     $('.portfolio-link').css('display', 'flex');
                     $('.portfolio-recent').css('display', 'none');
                     if (this.cardsCounter !== 4) this.cardsCounter = 4;
                 } else {
                     $('.portfolio__controls span:nth-child(1)').css('color', '#fff');
-                    $('.portfolio__controls span:nth-child(2)').css('color', '#444444');
+                    $('.portfolio__controls span:nth-child(2)').css('color', '#86868B');
                     $('.portfolio-link').css('display', 'none');
                     $('.portfolio-recent').css('display', 'flex');
                 }

@@ -59,7 +59,7 @@
 
   &__big-title {
     font-size: 64px;
-    font-weight: 600;
+    font-family: "SF Pro Display bold";
   }
 
 }
@@ -179,12 +179,17 @@
   padding-left: 65px;
 }
 
+.recent-news .p-2,
+.news-for-you .p-2 {
+  padding-left: 0 !important;
+}
 
 .news-section-header {
   font-size: 17px;
   line-height: 29px;
   margin-bottom: 15px;
   color: #000;
+  font-family: "SF Pro Display bold";
 }
 
 
@@ -217,6 +222,7 @@
     font-size: 13px;
     line-height: 1;
     color: #ffffff;
+    font-family: "SF Pro Text";
     &::before {
       content: '';
       position: absolute;
@@ -239,6 +245,7 @@
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
+    font-family: "SF Pro Display bold";
     &:hover, &:active, &:focus {
       color: #ffffff;
     }
@@ -354,6 +361,8 @@
     font-size: 24px;
     line-height: 38px;
     max-width: 880px;
+    font-family: "SF Pro Display medium";
+    color: #4B4B4B;
   }
   & .header-content-block__title {
     display: block;
@@ -410,7 +419,7 @@
   font-size: 48px;
   line-height: 52px;
   color: #1D1D1F;
-  font-weight: bold;
+  font-family: "SF Pro Display bold";
 }
 
 .fund-sector-items {
@@ -439,6 +448,7 @@
       line-height: 21px;
       color: #FF6C00;
       max-width: 420px;
+      font-family: "SF Pro Display";
     }
 
     & .d-flex {
@@ -471,6 +481,7 @@
       border-bottom: 2px solid #FF6C00;
       padding-bottom: 5px;
       padding-top: 150px;
+      color: black;
     }
 
     p {
@@ -494,10 +505,10 @@
     span {
       font-size: 17px;
       line-height: 29px;
-      font-weight: 700;
       padding-bottom: 5px;
       color: #000000;
-      font-weight: 600;
+      font-family: "SF Pro Display";
+      font-weight: 700;
     }
 
     p {
@@ -525,6 +536,7 @@
       padding-bottom: 5px;
       color: #000000;
       font-weight: 600;
+      font-family: "SF Pro Display";
     }
 
     p {
@@ -751,6 +763,7 @@
     font-family: 'SF Pro Display bold';
     font-size: 21px;
     margin-bottom: 20px;
+    color: black;
   }
   &__text {
     font-family: 'SF Pro Text';
@@ -773,6 +786,10 @@
     & .card-info__text {
       opacity: 1;
     }
+  }
+
+  & p {
+    font-family: "SF Pro Text";
   }
 }
 
@@ -990,6 +1007,7 @@
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      font-family: "SF Pro Display medium";
     }
 
     &-wrapper {
@@ -1066,7 +1084,8 @@
   &__fund {
     color: white;
     display: block;
-    font-weight: 600;
+    font-family: "SF Pro Display bold";
+    font-size: 14px;
   }
 }
 
@@ -1464,6 +1483,7 @@
     font-family: "SF Pro Display medium";
     font-size: 19px;
     margin-top: 30px;
+    line-height: 31px;
   }
 }
 
@@ -1472,7 +1492,7 @@
   padding-left: 30px;
   &__ul {
     & li {
-      font-family: "SF Pro Display";
+      font-family: "SF Pro Text";
       &:first-child {
         font-family: "SF Pro Display bold";
       }
@@ -1481,6 +1501,7 @@
 
   & a {
     display: block;
+    font-family: "SF Pro Text";
   }
 }
 
@@ -1606,6 +1627,15 @@
 
   .section-padding {
     padding-left: 15px;
+  }
+
+  .advantages-section .advantages-block {
+    &:first-child {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-left: 0;
+    }
   }
 
   .header-content-block,
